@@ -11,11 +11,15 @@ import UIKit
 class InventoryViewController: UIViewController {
 
     var viewModel: InventoryViewModel?
+    @IBOutlet weak var topView: TopView!
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = InventoryViewModel()
-        
+        topView.parentViewController = self
     }
 
 }

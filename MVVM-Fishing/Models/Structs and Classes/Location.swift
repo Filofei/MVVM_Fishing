@@ -10,7 +10,7 @@ import UIKit
 
 /// A struct that represents a location of a certain base.
 
-struct Location: ImageType, Nameable {
+struct Location {
     
     let image: UIImage
     
@@ -23,6 +23,7 @@ struct Location: ImageType, Nameable {
             return (minDepth + maxDepth)/2
         }
     }
+    
     let minDepth: Int
     let maxDepth: Int
     /// The number 

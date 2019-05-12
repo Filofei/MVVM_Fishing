@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct Reel: ItemType, ImageType, Nameable {
+class Reel: Object, ItemType {
     
-    var premium: Bool
-    var price: Int
+    @objc dynamic var id: String = ""
+    @objc dynamic var premium: Bool = false
+    @objc dynamic var price: Int = 0
+    @objc dynamic var imagePath: String = ""
+    @objc dynamic var name: String = ""
+    /// Represents the force which reel applies to the fish pulling process. 
+    @objc dynamic var value: Float = 0.0
     
-    var image: UIImage
+    convenience init(premium: Bool, price: Int, imagePath: String, name: String, value: Float) {
+        self.init()
+        self.premium = premium
+        self.price = price
+        self.imagePath = imagePath
+        self.name = name
+        self.value = value
+        self.id = "id_\(name)"
+    }
     
-    var name: String
-    
-    var resistance: Float
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
+

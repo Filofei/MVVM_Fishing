@@ -11,15 +11,38 @@ import RealmSwift
 
 class User: Object {
     
-    @objc dynamic var name: String = ""
-    @objc dynamic var level: Int = 0
-    @objc dynamic var currentBase: String = ""
+    @objc dynamic var id: String = "user"
+    @objc dynamic var name: String = "Игрок 1"
+    @objc dynamic var level: Int = 1
+    @objc dynamic var currentBase: String = Bases.country.rawValue
+    @objc dynamic var money: Int = 1000
     
-    convenience init(name: String, level: Int, currentBase: String) {
+    convenience init(name: String, level: Int, currentBase: String, money: Int) {
         self.init()
         self.name = name
         self.level = level
         self.currentBase = currentBase
+        self.money = money
+    }
+    func subtractMoney(_ money: Int) {
+        guard let realm = realm else { return }
+        try! realm.write {
+            if money > self.money {
+                return
+            }
+            self.money -= money
+        }
+    }
+    
+    func addMoney(_ money: Int) {
+        guard let realm = realm else { return }
+        try! realm.write {
+            self.money += money
+        }
+    }
+    
+    override static func primaryKey() -> String {
+        return "id"
     }
 }
 

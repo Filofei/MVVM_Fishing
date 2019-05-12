@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// A protocol that represents an item which can be broken.
+/// A protocol that represents an item which is used to hook the fish.
 
 protocol Hookable {
     /// Determines the chance to lose the fish while pulling it out of the water. Can be from 0.0 to 1.0.

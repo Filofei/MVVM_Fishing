@@ -7,4 +7,8 @@ target 'MVVM-Fishing' do
 
   # Pods for MVVM-Fishing
 	pod 'RealmSwift'
+    pod 'RxSwift'
+    pod 'Bond'
+    pod 'TinyConstraints'
+    pod 'lottie-ios'
 end

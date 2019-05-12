@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let realm = try! Realm()
+        try! realm.write {
+            //realm.deleteAll()
+            //realm.add(User())
+        }
+        let defaultsManager = DefaultsManager()
+        defaultsManager.saveNumberOfLaunches(key: DefaultsKeys.numberOfLaunches.rawValue)
+        
         // Override point for customization after application launch.
         return true
     }

@@ -10,14 +10,16 @@ import UIKit
 
 /// A struct that represents a base to be visited by the player.
 
-struct Base: ImageType, Nameable {
+struct Base {
     
     let image: UIImage
     
     let name: String
-    
+    /// An array of all the locations of this base.
     let locations: [Location]
-    var priceForATicket: Int
+    /// Price per one day on the base.
+    var dailyPrice: Int
+    /// The minimum player's level required to visit the base.
     let levelRequired: Int
     /// The literal description of the base.
     let description: String

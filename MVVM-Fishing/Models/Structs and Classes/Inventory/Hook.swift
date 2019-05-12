@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct Hook: ItemType, ImageType, Nameable, Hookable {
-    var premium: Bool
-    var price: Int
+class Hook: Object, ItemType {
     
-    var image: UIImage
+    @objc dynamic var id: String = ""
+    @objc dynamic var premium: Bool = false
+    @objc dynamic var price: Int = 0
+    @objc dynamic var imagePath: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var value: Float = 0.0
     
-    var name: String
+    convenience init(premium: Bool, price: Int, imagePath: String, name: String, value: Float) {
+        self.init()
+        self.premium = premium
+        self.price = price
+        self.imagePath = imagePath
+        self.name = name
+        self.value = value
+        self.id = "id_\(name)"
+    }
     
-    var hookability: Float
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
+

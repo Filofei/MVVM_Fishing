@@ -7,17 +7,34 @@
 //
 
 import UIKit
+import Bond
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController  {
 
-    var viewModel: ProfileMenuViewModel?
+    var viewModel: ProfileViewModel?
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topView: TopView!
+    @IBOutlet weak var recordsButton: UIButton!
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = ProfileMenuViewModel()
-        
+        viewModel = ProfileViewModel()
+        tableView.delegate = self
+        tableView.dataSource = self
+        topView.parentViewController = self
+    }
+    
+    private func bindUIElements() {
+        recordsButton.reactive.tap
+            .observeNext {
+                
+            }
+            .dispose(in: bag)
     }
 
 }

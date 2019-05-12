@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct Line: ItemType, ImageType, Nameable, Breakable {
+class Line: Object, ItemType, Breakable {
     
-    var premium: Bool
-    var price: Int
+    @objc dynamic var id: String = ""
+    @objc dynamic var premium: Bool = false
+    @objc dynamic var price: Int = 0
+    @objc dynamic var imagePath: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var state: Float = 0.0
+    /// Represents the maximum weight of the fish that the line can handle.
+    @objc dynamic var value: Float = 0.0
     
-    var image: UIImage
+    convenience init(premium: Bool, price: Int, imagePath: String, name: String, state: Float, value: Float) {
+        self.init()
+        self.premium = premium
+        self.price = price
+        self.imagePath = imagePath
+        self.name = name
+        self.state = state
+        self.value = value
+        self.id = "id_\(name)"
+    }
     
-    var name: String
-    
-    var resistance: Float
-    
-    var state: Float
-
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

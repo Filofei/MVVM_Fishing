@@ -10,4 +10,8 @@ import UIKit
 
 class InventoryViewModel {
     
+    // MARK: Properties
+    
+    private var tackles: [Tackle] = []
+
 }
