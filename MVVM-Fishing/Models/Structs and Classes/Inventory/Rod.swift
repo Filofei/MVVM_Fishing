@@ -20,9 +20,9 @@ class Rod: Object, ItemType, Breakable {
     @objc dynamic var name: String = ""
     @objc dynamic var state: Float = 0.0
     /// Represents the maximum weight of the fish that the rod can handle.
-    @objc dynamic var value: Float = 0.0
+    @objc dynamic var value: Int = 0
     
-    convenience init(premium: Bool, price: Int, imagePath: String, name: String, state: Float, value: Float) {
+    convenience init(premium: Bool, price: Int, imagePath: String, name: String, state: Float, value: Int) {
         self.init()
         self.premium = premium
         self.price = price

@@ -11,35 +11,50 @@ import RealmSwift
 
 class Tackle: Object {
     
-    @objc dynamic var name: String? = "Снасть"
+    @objc dynamic var id: String? = nil
     @objc dynamic var rod: Rod? = nil
     @objc dynamic var reel: Reel? = nil
     @objc dynamic var line: Line? = nil
     @objc dynamic var hook: Hook? = nil
+    @objc dynamic var bait: Bait? = nil
     @objc dynamic var complete: Bool = false
     
-    private var itemsArray: Array<Object?> = [] {
-        didSet {
-            completionChecker()
-        }
-    }
-    
-    convenience init(name: String, rod: Rod?, reel: Reel?, line: Line?, hook: Hook?) {
+    convenience init(id: String, rod: Rod?, reel: Reel?, line: Line?, hook: Hook?, bait: Bait?) {
         self.init()
-        self.name = name
+        self.id = id
         self.rod = rod
         self.reel = reel
         self.line = line
         self.hook = hook
-        itemsArray = [self.rod, self.reel, self.line, self.hook]
+        self.bait = bait
     }
-    private func completionChecker() {
-        Array(arrayLiteral: rod, reel, line, hook).forEach { (item) in
-            if item == nil {
+    
+    convenience init(id: String) {
+        self.init()
+        self.id = id
+    }
+    
+    public func checkCompletion() {
+        Array(arrayLiteral: rod, reel, line, hook, bait).forEach {
+            if $0 == nil {
+                try! realm?.write {
+                    complete = false
+                }
                 return
             } else {
-                complete = true
+                try! realm?.write {
+                    complete = true
+                }
             }
         }
     }
+    
+    override static func primaryKey() -> String {
+        return "id"
+    }
+    
+    override static func indexedProperties() -> [String] {
+        return ["rod", "reel", "line", "hook", "bait"]
+    }
+    
 }

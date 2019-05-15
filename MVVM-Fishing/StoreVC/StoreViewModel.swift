@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Bond
 import ReactiveKit
 import RealmSwift
 
@@ -54,7 +53,7 @@ class StoreViewModel: StoreViewControllerViewModelType {
     var chosenCategory: Int = 0 {
         didSet {
             switch chosenCategory {
-            case 0:
+            case 0: 
                 items = RodsData.rods
             case 1:
                 items = ReelsData.reels

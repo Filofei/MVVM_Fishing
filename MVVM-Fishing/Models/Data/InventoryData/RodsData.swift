@@ -14,8 +14,8 @@ struct RodsData {
     
     /// Array containing rods data to be purchased in the store and kept in the inventory.
     static let rods: [Rod] = [
-        Rod(premium: false, price: 100, imagePath: "", name: "Бамбуковая удочка", state: 1.0, value: 5),
-        Rod(premium: false, price: 600, imagePath: "", name: "Лёгкая удочка", state: 1.0, value: 15),
-        Rod(premium: false, price: 3500, imagePath: "", name: "Хорошая удочка", state: 1.0, value: 40),
+        Rod(premium: false, price: 100, imagePath: "", name: "Бамбуковая", state: 1.0, value: 5),
+        Rod(premium: false, price: 600, imagePath: "", name: "Лёгкая", state: 1.0, value: 15),
+        Rod(premium: false, price: 3500, imagePath: "", name: "Хорошая", state: 1.0, value: 40),
     ]
 }

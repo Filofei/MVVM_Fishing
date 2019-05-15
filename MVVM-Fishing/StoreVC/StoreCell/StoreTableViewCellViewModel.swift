@@ -33,21 +33,7 @@ class TableViewCellViewModel: StoreTableViewCellViewModelType {
     }
     
     var value: String {
-        let rawValue = Int(items.value)
-        switch items {
-        case _ where items is Rod:
-            return String(describing: rawValue) + " кг."
-        case _ where items is Reel:
-            return String(describing: rawValue) + "%"
-        case _ where items is Line:
-            return String(describing: rawValue) + " кг."
-        case _ where items is Hook:
-            return String(describing: rawValue) + "%"
-        case _ where items is Bait:
-            return String(describing: rawValue) + " шт."
-        default:
-            return String(describing: rawValue)
-        }
+        return items.formattedValue()
     }
     
     init(items: ItemType) {

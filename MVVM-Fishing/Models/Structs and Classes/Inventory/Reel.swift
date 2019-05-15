@@ -17,9 +17,9 @@ class Reel: Object, ItemType {
     @objc dynamic var imagePath: String = ""
     @objc dynamic var name: String = ""
     /// Represents the force which reel applies to the fish pulling process. 
-    @objc dynamic var value: Float = 0.0
+    @objc dynamic var value: Int = 0
     
-    convenience init(premium: Bool, price: Int, imagePath: String, name: String, value: Float) {
+    convenience init(premium: Bool, price: Int, imagePath: String, name: String, value: Int) {
         self.init()
         self.premium = premium
         self.price = price

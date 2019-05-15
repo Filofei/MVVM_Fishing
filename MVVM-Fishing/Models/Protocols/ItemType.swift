@@ -21,5 +21,5 @@ protocol ItemType {
     /// A UIImage depicting the image of the object.
     var imagePath: String { get }
     ///
-    var value: Float { get }
+    var value: Int { get }
 }

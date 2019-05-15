@@ -94,12 +94,19 @@ extension PickerViewViewController: UIPickerViewDataSource, UIPickerViewDelegate
      public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
      // attributed title is favored if both methods are implemented
      }
-     
-     
-     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-     
-     }
      */
+
+     
+//     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        
+//        var pickerLabel = view as? UILabel
+//        if (pickerLabel == nil) {
+//            pickerLabel = UILabel()
+//            //pickerLabel?.font = UIFont.systemFont(ofSize: 18)
+//            pickerLabel?.textAlignment = .center
+//        }
+//        return pickerLabel!
+//     }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         action?(self, pickerView, Index(column: component, row: row), values)
     }

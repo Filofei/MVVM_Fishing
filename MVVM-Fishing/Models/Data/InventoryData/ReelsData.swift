@@ -15,7 +15,7 @@ struct ReelsData {
     
     /// Array containing rods data to be purchased in the store and kept in the inventory.
     static let reels: [Reel] = [
-        Reel(premium: false, price: 200, imagePath: "", name: "Инерционная катушка", value: 5.0),
-        Reel(premium: false, price: 500, imagePath: "", name: "Hook&Rod 120 light", value: 10.0)
+        Reel(premium: false, price: 200, imagePath: "", name: "Инерционная", value: 5),
+        Reel(premium: false, price: 500, imagePath: "", name: "Hook&Rod 120R", value: 10)
     ]
 }

@@ -10,7 +10,7 @@ import UIKit
 import Bond
 import RealmSwift
 
-class StoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ScrollBarDelegate {
+class StoreViewController: UIViewController,  ScrollBarDelegate {
 
     var viewModel: StoreViewControllerViewModelType?
     @IBOutlet weak var purchaseButton: UIButton!

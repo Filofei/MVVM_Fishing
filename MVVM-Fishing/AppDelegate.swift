@@ -15,11 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let realm = try! Realm()
-        try! realm.write {
-            //realm.deleteAll()
-            //realm.add(User())
-        }
+        initializeRealmData()
         let defaultsManager = DefaultsManager()
         defaultsManager.saveNumberOfLaunches(key: DefaultsKeys.numberOfLaunches.rawValue)
         
@@ -47,6 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func initializeRealmData() {
+        let realm = try! Realm()
+        print(realm.configuration.fileURL!)
+        try! realm.write {
+            //realm.deleteAll()
+            if realm.objects(User.self).isEmpty {
+                realm.add(User())
+            }
+            if realm.objects(Tackle.self).isEmpty {
+                (0...1).forEach {
+                    realm.add(Tackle(id: MainPrimaryKeys.tackles[$0]))
+                }
+            }
+        }
     }
 
 

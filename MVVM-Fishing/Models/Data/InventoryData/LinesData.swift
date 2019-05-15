@@ -15,8 +15,8 @@ struct LinesData {
     
     /// Array containing rods data to be purchased in the store and kept in the inventory.
     static let lines: [Line] = [
-        Line(premium: false, price: 50, imagePath: "", name: "Московская", state: 1.0, value: 4.5),
-        Line(premium: false, price: 300, imagePath: "", name: "Hook&Rod 12", state: 1.0, value: 12)
+        Line(premium: false, price: 50, imagePath: "", name: "Московская", state: 1.0, value: 5),
+        Line(premium: false, price: 300, imagePath: "", name: "Hook&Rod 12L", state: 1.0, value: 12)
     ]
 }
 

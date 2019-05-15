@@ -16,7 +16,7 @@ class User: Object {
     @objc dynamic var level: Int = 1
     @objc dynamic var currentBase: String = Bases.country.rawValue
     @objc dynamic var money: Int = 1000
-    
+
     convenience init(name: String, level: Int, currentBase: String, money: Int) {
         self.init()
         self.name = name
