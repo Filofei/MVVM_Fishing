@@ -35,26 +35,20 @@ class Tackle: Object {
     }
     
     public func checkCompletion() {
-        Array(arrayLiteral: rod, reel, line, hook, bait).forEach {
-            if $0 == nil {
-                try! realm?.write {
-                    complete = false
-                }
-                return
-            } else {
-                try! realm?.write {
-                    complete = true
-                }
+        if Array(arrayLiteral: rod, reel, line, hook, bait).contains(nil) {
+            try! realm?.write {
+                complete = false
+            }
+        } else {
+            try! realm?.write {
+                complete = true
             }
         }
+        print("Tackle completion changed to \(complete)")
     }
     
     override static func primaryKey() -> String {
         return "id"
-    }
-    
-    override static func indexedProperties() -> [String] {
-        return ["rod", "reel", "line", "hook", "bait"]
     }
     
 }

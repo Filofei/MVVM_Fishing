@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32DAFA0D3C475FF99B812DA7 /* Pods_MVVM_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3EE94E7F0A331B3DF713E2 /* Pods_MVVM_Fishing.framework */; };
+		9C08B492228D9A0700705207 /* StoreViewController + UI + Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08B491228D9A0700705207 /* StoreViewController + UI + Bindings.swift */; };
 		9C5195B8222507E30064E29E /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195B7222507E30064E29E /* Fish.swift */; };
 		9C5195BC222509E80064E29E /* Fishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195BB222509E80064E29E /* Fishes.swift */; };
 		9C5195BE222510C70064E29E /* Breakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195BD222510C70064E29E /* Breakable.swift */; };
@@ -124,6 +125,7 @@
 		0E3EE94E7F0A331B3DF713E2 /* Pods_MVVM_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F00DC093798F301CA59B25 /* Pods-MVVM-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Fishing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
 		7C248AEAC0AC3761ED101B27 /* Pods-MVVM-Fishing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Fishing.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing.release.xcconfig"; sourceTree = "<group>"; };
+		9C08B491228D9A0700705207 /* StoreViewController + UI + Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreViewController + UI + Bindings.swift"; sourceTree = "<group>"; };
 		9C5195B7222507E30064E29E /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		9C5195BB222509E80064E29E /* Fishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishes.swift; sourceTree = "<group>"; };
 		9C5195BD222510C70064E29E /* Breakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakable.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				9C5195D622256E920064E29E /* StoreViewModel.swift */,
 				9CBAD1A5222D82630059CF16 /* StoreViewControllerViewModelType.swift */,
 				9CB3F332222C45B400B1F625 /* StoreViewController + UITableViewDelegate + UITableViewDataSource.swift */,
+				9C08B491228D9A0700705207 /* StoreViewController + UI + Bindings.swift */,
 			);
 			path = StoreVC;
 			sourceTree = "<group>";
@@ -750,34 +753,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
-				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		427D4CA7D0768CF23BCDC6F7 /* [CP] Check Pods Manifest.lock */ = {
@@ -861,6 +845,7 @@
 				9C5383F42261016A00BFE552 /* FishMarketViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */,
 				9C5383E22260C7AA00BFE552 /* ProfileViewControllerViewModelType.swift in Sources */,
 				9CBAD1A4222D68300059CF16 /* StoreTableViewCellViewModel.swift in Sources */,
+				9C08B492228D9A0700705207 /* StoreViewController + UI + Bindings.swift in Sources */,
 				9CEDA7F6225F972F004799A2 /* StaticStrings.swift in Sources */,
 				9C5383EC2260FCFD00BFE552 /* FishMarketViewControllerViewModelType.swift in Sources */,
 				9CFF8B8B22886A6F0076F269 /* AttributedTextBlock.swift in Sources */,

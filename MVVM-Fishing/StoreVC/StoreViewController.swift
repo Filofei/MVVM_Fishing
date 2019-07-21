@@ -27,6 +27,12 @@ class StoreViewController: UIViewController,  ScrollBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initialize()
+        setAppearance()
+        bindUIElements()
+    }
+    
+    private func initialize() {
         viewModel = StoreViewModel()
         viewModel?.viewController = self
         
@@ -40,49 +46,13 @@ class StoreViewController: UIViewController,  ScrollBarDelegate {
         scrollBar.addCells(withImages: viewModel?.scrollBarImages ?? [], text: viewModel?.scrollBarText ?? [])
         
         moneyLabel.text = self.viewModel?.money
-        
-        setAppearance()
-        bindUIElements()
-        }
     }
-
-extension StoreViewController {
     
-    func didSelectCell(atIndex index: Int) {
+    internal func didSelectCell(atIndex index: Int) {
         viewModel?.chosenCategory = index
         viewModel?.deselectRow()
         tableView.reloadData()
     }
-    private func bindUIElements() {
-        purchaseButton.reactive.tap
-            .observeNext {
-                self.viewModel?.addToInventory(completion: {
-                    self.moneyLabel.text = self.viewModel?.money
-                    self.viewModel?.deselectRow()
-                    self.tableView.reloadData()
-                })
-            }
-            .dispose(in: bag)
-    }
-    
-    private func setAppearance() {
-        
-        // ScrollBar appearance
-        
-        scrollBar.height = 70
-        scrollBar.cells.forEach {
-            $0.label.textColor = Palette.darkGreen
-        }
-        
-        // TopView appearance
-        
-        topView.timeLabel.textColor = Palette.darkGreen
-        topView.buttons?.forEach {
-            $0.tintColor = Palette.darkGreen
-        }
-        
-        // Other appearance
-        
-        moneyLabel.textColor = Palette.darkGreen
-    }
 }
+
+

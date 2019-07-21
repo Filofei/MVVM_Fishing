@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveKit
 import Bond
 
 class InventoryViewController: UIViewController {
@@ -31,10 +32,13 @@ class InventoryViewController: UIViewController {
     }
     
     private func bindUI() {
+        
+        viewModel?.tackleStatus.bind(to: tackleConditionLabel)
+        
         segmentedControl.reactive.selectedSegmentIndex.observeNext { value in
             self.viewModel?.selectedSegment = value
         }
-        .dispose(in: bag)
+            .dispose(in: bag)
         
     }
 

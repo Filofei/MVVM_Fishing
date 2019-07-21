@@ -22,6 +22,6 @@ extension InventoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel?.selectRow(atIndexPath: indexPath)
-        self.viewModel?.showPickerView(in: self, for: InventoryTypes.types[indexPath.row] as! Object.Type)
+        self.viewModel?.showPickerView(in: self, for: InventoryTypes.types[indexPath.row])
     }
 }

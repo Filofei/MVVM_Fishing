@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaultsManager = DefaultsManager()
         defaultsManager.saveNumberOfLaunches(key: DefaultsKeys.numberOfLaunches.rawValue)
         
-        // Override point for customization after application launch.
         return true
     }
 
@@ -49,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         print(realm.configuration.fileURL!)
         try! realm.write {
-            //realm.deleteAll()
+            realm.deleteAll()
             if realm.objects(User.self).isEmpty {
                 realm.add(User())
             }

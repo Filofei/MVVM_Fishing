@@ -1054,7 +1054,7 @@ Trivial enough. Creating a `ConnectableSignal` with `ReplaySubject` ensures that
 
 We somehow need to convert connectable signal into a non-connectable one. In order to do that, we need to call connect at the right time and dispose at the right time. What are the right times? It is only reasonable - right time to connect is on the first observation and right time to dispose is when the last observation is disposed.
 
-In order to do this, we will keep a reference count. With each new observer, the count goes up, while on each disposal it goes down. We will connect when count goes from 0 to 1 and dispose when count goes from 1 to 0.  
+In order to do this, we will keep a reference count. With each new observer, the count goes up, while on each disposal it goes down. We will connect when count goes from 0 to 1 and dispose when count goes from 1 to 0.
 
 ```swift
 public extension ConnectableSignalProtocol {
@@ -1237,7 +1237,7 @@ extension UIViewController: LoadingStateListener {
 }
 ```
 
-Notice that `LoadingStateListener` gets `ObservedLoadingState` instead of `LoadingState`. The difference between the two is that the former has one additional state: `.reloading`. ReactiveKit will automatically convert subsequent `.loading` states into `.reloading` states so that you can potentially act differently in those two cases. 
+Notice that `LoadingStateListener` gets `ObservedLoadingState` instead of `LoadingState`. The difference between the two is that the former has one additional state: `.reloading`. ReactiveKit will automatically convert subsequent `.loading` states into `.reloading` states so that you can potentially act differently in those two cases.
 
 Now that we have a loading state listener, we can convert any loading signal into a regular safe signal by consuming its loading state by the listener:
 
@@ -1250,7 +1250,7 @@ fetchImage
     }
 ```
 
-Exciting! Operator `consumeLoadingState` takes the loading state listener and updates it each time a state is produced by the loading signal. It returns a safe signal of loading values, i.e. it unwraps the underlying value from the `.loaded` state. In our example that would be `SafeSignal<UIImage>` which we can then bind to our image view and update its content. 
+Exciting! Operator `consumeLoadingState` takes the loading state listener and updates it each time a state is produced by the loading signal. It returns a safe signal of loading values, i.e. it unwraps the underlying value from the `.loaded` state. In our example that would be `SafeSignal<UIImage>` which we can then bind to our image view and update its content.
 
 #### Transforming loading signals
 
@@ -1277,7 +1277,7 @@ class UserService {
     let user: LoadingProperty<User, ApplicationError>
 
     init(_ api: API) {
-        
+
         user = LoadingProperty {
             api.fetchUser()
         }
@@ -1344,12 +1344,12 @@ All you have to provide to the operator is the signals and a closure that maps t
 
 ## Requirements
 
-* iOS 8.0+ / macOS 10.9+ / tvOS 9.0+ / watchOS 2.0+
+* iOS 8.0+ / macOS 10.11+ / tvOS 9.0+ / watchOS 2.0+
 * Xcode 10.2
 
 or
 
-* Linux + Swift 5.0 
+* Linux + Swift 5.0
 
 ## Installation
 
@@ -1389,10 +1389,11 @@ let package = Package(
 
 ## Communication
 
-* If you'd like to ask a general question, open an issue.
-* If you have found a bug, open an issue or do a pull request with the fix.
-* If you have a feature request, open an issue.
-* If you want to contribute, submit a pull request (include unit tests).
+* If you'd like to ask a general question, you can [open an issue](https://github.com/DeclarativeHub/ReactiveKit/issues) or go to [StackOverflow](https://stackoverflow.com/questions/tagged/reactivekit).
+* If you have found a bug, [open an issue](https://github.com/DeclarativeHub/ReactiveKit/issues) or create a [pull request](https://github.com/DeclarativeHub/ReactiveKit/pulls) with the fix.
+* If you have a feature request, [open an issue](https://github.com/DeclarativeHub/ReactiveKit/issues) .
+* If you want to contribute, submit a [pull request](https://github.com/DeclarativeHub/ReactiveKit/pulls) (include unit tests).
+
 
 ## Additional Documentation
 
