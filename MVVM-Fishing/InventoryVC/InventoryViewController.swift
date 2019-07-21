@@ -9,6 +9,9 @@
 import UIKit
 import ReactiveKit
 import Bond
+import RealmSwift
+import RxRealm
+import RxSwift
 
 class InventoryViewController: UIViewController {
 
