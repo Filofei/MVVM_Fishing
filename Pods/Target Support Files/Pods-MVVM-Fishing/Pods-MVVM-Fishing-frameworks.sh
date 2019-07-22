@@ -9,7 +9,7 @@ function on_error {
 trap 'on_error $LINENO' ERR
 
 if [ -z ${FRAMEWORKS_FOLDER_PATH+x} ]; then
-  # If FRAMEWORKS_FOLDER_PATH is not set,   then there's nowhere for us to copy
+  # If FRAMEWORKS_FOLDER_PATH is not set, then there's nowhere for us to copy
   # frameworks to, so exit 0 (signalling the script phase was successful).
   exit 0
 fi
