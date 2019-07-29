@@ -10,7 +10,7 @@ import UIKit
 
 extension StoreViewController {
         
-    func bindUIElements() {
+    func bindUI() {
         purchaseButton.reactive.tap
             .observeNext {
                 self.viewModel?.addToInventory(completion: {

@@ -103,8 +103,6 @@ class StoreViewModel: StoreViewControllerViewModelType {
                     if item.price > user.money {
                         showAlert(.notEnoughMoney)
                     } else {
-                        print(user.money)
-                        print(item.price)
                         user.subtractMoney(item.price)
                         try! realm.write {
                             realm.add(item as! Object)
@@ -120,14 +118,14 @@ class StoreViewModel: StoreViewControllerViewModelType {
         let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
         switch outcome {
         case .success:
-            alert.title = StaticStrings.StoreVC.purchaseSuccess.0
-            alert.message = StaticStrings.StoreVC.purchaseSuccess.1
+            alert.title = StaticStrings.StoreVM.purchaseSuccess.0
+            alert.message = StaticStrings.StoreVM.purchaseSuccess.1
         case .alreadyExists:
-            alert.title = StaticStrings.StoreVC.alreadyBought.0
-            alert.message = StaticStrings.StoreVC.alreadyBought.1
+            alert.title = StaticStrings.StoreVM.alreadyBought.0
+            alert.message = StaticStrings.StoreVM.alreadyBought.1
         case .notEnoughMoney:
-            alert.title = StaticStrings.StoreVC.notEnoughMoney.0
-            alert.message = StaticStrings.StoreVC.notEnoughMoney.1
+            alert.title = StaticStrings.StoreVM.notEnoughMoney.0
+            alert.message = StaticStrings.StoreVM.notEnoughMoney.1
         }
 
         let action = UIAlertAction(title: "Ок", style: .cancel, handler: nil)

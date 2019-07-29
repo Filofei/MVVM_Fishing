@@ -11,17 +11,19 @@ import UIKit
 class InventoryTableViewCellViewModel: InventoryTableViewCellViewModelType {
     
     internal var index: Int
+        
+    var currentItem: ItemType?
     
     var name: String {
-        return InventoryTypes.name[index]
+        return currentItem?.name ?? InventoryTypes.name[index]
     }
     
     var value: String {
-        return ""
+        return currentItem?.formattedValue() ?? ""
     }
     
     var image: UIImage? {
-        return InventoryTypes.images[index]
+        return UIImage(named: currentItem?.imagePath ?? "") ?? InventoryTypes.images[index]
     }
     
     init(index: Int) {

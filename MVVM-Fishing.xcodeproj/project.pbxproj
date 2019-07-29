@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		32DAFA0D3C475FF99B812DA7 /* Pods_MVVM_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3EE94E7F0A331B3DF713E2 /* Pods_MVVM_Fishing.framework */; };
 		9C08B492228D9A0700705207 /* StoreViewController + UI + Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08B491228D9A0700705207 /* StoreViewController + UI + Bindings.swift */; };
+		9C08B6DE22E747E500323D7F /* InventoryViewController + UI + Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08B6DD22E747E500323D7F /* InventoryViewController + UI + Bindings.swift */; };
 		9C5195B8222507E30064E29E /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195B7222507E30064E29E /* Fish.swift */; };
 		9C5195BC222509E80064E29E /* Fishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195BB222509E80064E29E /* Fishes.swift */; };
 		9C5195BE222510C70064E29E /* Breakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5195BD222510C70064E29E /* Breakable.swift */; };
@@ -126,6 +127,7 @@
 		70F00DC093798F301CA59B25 /* Pods-MVVM-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Fishing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
 		7C248AEAC0AC3761ED101B27 /* Pods-MVVM-Fishing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Fishing.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing.release.xcconfig"; sourceTree = "<group>"; };
 		9C08B491228D9A0700705207 /* StoreViewController + UI + Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreViewController + UI + Bindings.swift"; sourceTree = "<group>"; };
+		9C08B6DD22E747E500323D7F /* InventoryViewController + UI + Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryViewController + UI + Bindings.swift"; sourceTree = "<group>"; };
 		9C5195B7222507E30064E29E /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		9C5195BB222509E80064E29E /* Fishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fishes.swift; sourceTree = "<group>"; };
 		9C5195BD222510C70064E29E /* Breakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakable.swift; sourceTree = "<group>"; };
@@ -422,7 +424,6 @@
 				9CB3F330222C3D1D00B1F625 /* Assets.xcassets */,
 				9CAD524122207E8600732584 /* LaunchScreen.storyboard */,
 				9CAD524422207E8600732584 /* Info.plist */,
-				9CFF8BC1228BDBB40076F269 /* FatalErrorMessages.swift */,
 			);
 			path = "MVVM-Fishing";
 			sourceTree = "<group>";
@@ -500,6 +501,7 @@
 				9CCD3D2022211CD9008747FA /* InventoryViewModel.swift */,
 				9CFF8BAF22887DB50076F269 /* InventoryViewController + UITableViewDelegate + UITableViewDataSource.swift */,
 				9CFF8BBD228A91B10076F269 /* InventoryViewModelType.swift */,
+				9C08B6DD22E747E500323D7F /* InventoryViewController + UI + Bindings.swift */,
 			);
 			path = InventoryVC;
 			sourceTree = "<group>";
@@ -543,6 +545,7 @@
 				9CE292812223D5F700FECF2B /* Locations.swift */,
 				9C5195BB222509E80064E29E /* Fishes.swift */,
 				9CEDA7F5225F972F004799A2 /* StaticStrings.swift */,
+				9CFF8BC1228BDBB40076F269 /* FatalErrorMessages.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				9CFF8B8222886A6F0076F269 /* UIColor+Extensions.swift in Sources */,
 				9CB3F32D222A5E2800B1F625 /* ScrollBarCellDelegate.swift in Sources */,
 				9CCD3D1822211477008747FA /* InventoryViewController.swift in Sources */,
+				9C08B6DE22E747E500323D7F /* InventoryViewController + UI + Bindings.swift in Sources */,
 				9CB3F335222CDC5200B1F625 /* Bait.swift in Sources */,
 				9CE00A342222F31C00B7F220 /* RodsData.swift in Sources */,
 				9CE292842223DF4200FECF2B /* Record.swift in Sources */,

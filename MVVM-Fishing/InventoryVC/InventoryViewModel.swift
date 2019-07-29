@@ -18,18 +18,20 @@ class InventoryViewModel: InventoryViewModelType {
     
     internal var selectedIndexPath: IndexPath?
     
-    internal var tackleStatus: Observable<String> {
-        print("\(#function) triggered")
-        return Observable<String>(self.stringForTackleStatus(currentTackle?.complete))
-    }
+    internal var tackleStatus: Observable<String>
     
     internal var selectedSegment: Int = 0 {
         willSet {
-            currentTackle = realm.object(ofType: Tackle.self, forPrimaryKey: MainPrimaryKeys.tackles[newValue])
+            currentTackle = realm.object(ofType: Tackle.self, forPrimaryKey: MainPrimaryKeys.tackles[newValue]) ?? Tackle()
         }
     }
     
-    internal var currentTackle: Tackle?
+    internal var currentTackle: Tackle
+    
+    init() {
+        self.currentTackle = realm.object(ofType: Tackle.self, forPrimaryKey: MainPrimaryKeys.tackles[self.selectedSegment]) ?? Tackle()
+        self.tackleStatus = Observable<String>(currentTackle.complete ? StaticStrings.InventoryVM.tackleReady : StaticStrings.InventoryVM.tackleNotReady)
+    }
     
     // MARK: Methods
     
@@ -40,6 +42,7 @@ class InventoryViewModel: InventoryViewModelType {
         
         return cellViewModel
     }
+    
     func numberOfRows() -> Int {
         return InventoryTypes.types.count
     }
@@ -47,14 +50,26 @@ class InventoryViewModel: InventoryViewModelType {
     /// This method shows pickerview for choosing the element of the tackle.
     
     func showPickerView(in controller: UIViewController, for type: ItemType.Type) {
-        let alert = UIAlertController(style: .alert, title: "Выберите элемент снасти", message: InventoryTypes.name[InventoryTypes.types.firstIndex{$0 == type} ?? 0])
+        
+        let alert = UIAlertController(style: .alert, title: StaticStrings.InventoryVM.pickerViewTitle, message: InventoryTypes.name[InventoryTypes.types.firstIndex{$0 == type} ?? 0])
         
         // ADD CURRENT TYPE
         let items = getStoredItems(type: type)
+        func setPickerViewInitialValue() -> Int {
+            var output: Int = 0
+            items.enumerated().forEach { (index, value) in
+                if currentTackle.compareItems(value) != nil {
+                    output = index
+                }
+            }
+            return output
+        }
+
         let pickerViewValues: [[String]] = [convertStoredItems(items: items)]
-        let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: 0)
+        let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: setPickerViewInitialValue())
         let action = UIAlertAction(title: "Готово", style: .default) { _ in
-            self.currentTackle?.checkCompletion()
+            self.currentTackle.checkCompletion()
+            self.updateProperties()
         }
         alert.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { vc, picker, index, values in
             self.updateTackleElement(items: items, index: index.row)
@@ -99,15 +114,15 @@ class InventoryViewModel: InventoryViewModelType {
         try! realm.write {
             switch selectedIndexPath?.row {
             case 0:
-                currentTackle?.rod = items[index] as? Rod
+                currentTackle.rod = items[index] as? Rod
             case 1:
-                currentTackle?.reel = items[index] as? Reel
+                currentTackle.reel = items[index] as? Reel
             case 2:
-                currentTackle?.line = items[index] as? Line
+                currentTackle.line = items[index] as? Line
             case 3:
-                currentTackle?.hook = items[index] as? Hook
+                currentTackle.hook = items[index] as? Hook
             case 4:
-                currentTackle?.bait = items[index] as? Bait
+                currentTackle.bait = items[index] as? Bait
             default:
                 print("The developer fucked up.")
                 fatalError(FatalErrorMessages.Inventory.saveItemTypeError.rawValue)
@@ -115,11 +130,13 @@ class InventoryViewModel: InventoryViewModelType {
         }
     }
     
-    func stringForTackleStatus(_ status: Bool?) -> String {
-        var initialString = "Снасть не готова"
-        if let status = status {
-            if status == true {initialString = "Снасть готова"}
-        }
+    func stringForTackleStatus(_ status: Bool) -> String {
+        let initialString = status ? StaticStrings.InventoryVM.tackleReady : StaticStrings.InventoryVM.tackleNotReady
         return initialString
     }
+    
+    func updateProperties() {
+        self.tackleStatus.value = (self.stringForTackleStatus(self.currentTackle.complete))
+    }
+
 }

@@ -12,14 +12,18 @@ import RealmSwift
 class ProfileViewModel {
     
     private let realm = try! Realm()
-    private var user: User?
     
     func userFields() -> [UserField] {
         var output: [UserField] = []
-        guard let user = realm.object(ofType: User.self, forPrimaryKey: "user") else {
+        guard let realmUser = realm.object(ofType: User.self, forPrimaryKey: "user") else {
             return [UserField]()
         }
-        let mirror = Mirror(reflecting: user)
+        
+        // This (internalUser) is an awful workaround, appeared because of strange bug (I hope so) when mirror couldn't reflect values of the fetched from realm User() instance and loaded default values instead.
+        
+        let internalUser = User(name: realmUser.name, level: realmUser.level, currentBase: realmUser.currentBase, money: realmUser.money)
+        
+        let mirror = Mirror(reflecting: internalUser)
         for (_, child) in mirror.children.enumerated() {
             var element = UserField()
             if child.label == "id" {

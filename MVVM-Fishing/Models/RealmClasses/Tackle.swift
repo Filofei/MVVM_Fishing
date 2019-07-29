@@ -34,8 +34,12 @@ class Tackle: Object {
         self.id = id
     }
     
+    private func getClassProps() -> [ItemType?] {
+        return Array(arrayLiteral: rod, reel, line, hook, bait) as Array<ItemType?>
+    }
+    
     public func checkCompletion() {
-        if Array(arrayLiteral: rod, reel, line, hook, bait).contains(nil) {
+        if getClassProps().contains(where: {$0 == nil}) {
             try! realm?.write {
                 complete = false
             }
@@ -44,7 +48,17 @@ class Tackle: Object {
                 complete = true
             }
         }
-        print("Tackle completion changed to \(complete)")
+        print(complete)
+    }
+    
+    public func compareItems( _ value: ItemType?) -> ItemType? {
+        var output: ItemType?
+        getClassProps().forEach {
+            if $0?.id == value?.id {
+                output = $0
+            }
+        }
+        return output
     }
     
     override static func primaryKey() -> String {

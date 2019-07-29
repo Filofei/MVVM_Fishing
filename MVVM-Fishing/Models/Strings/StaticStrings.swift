@@ -19,15 +19,17 @@ enum StaticStrings {
             Только примеры моего кода.
             """
     }
-    enum StoreVC {
+    enum StoreVM {
         static let purchaseSuccess = ("Ура!","Поздравляем с покупкой!")
         static let alreadyBought = ("Хм...", "У вас уже есть такой предмет.")
         static let notEnoughMoney = ("Увы!", "Вам не хватает денег.")
     }
-    enum Errors {
-        static let outOfMoney = "The user's money is going to set below zero."
+
+    enum InventoryVM {
+        static let pickerViewTitle = "Выберите элемент снасти"
+        static let tackleReady = "Снасть готова!"
+        static let tackleNotReady = "Снасть не готова"
     }
-    
     
     static let p = ""
 

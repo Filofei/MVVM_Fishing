@@ -15,11 +15,11 @@ extension ItemType {
         case _ where self is Rod:
             return String(describing: rawValue) + " кг."
         case _ where self is Reel:
-            return String(describing: rawValue) + "%"
+            return String(describing: rawValue) + " %"
         case _ where self is Line:
             return String(describing: rawValue) + " кг."
         case _ where self is Hook:
-            return String(describing: rawValue) + "%"
+            return String(describing: rawValue) + " %"
         case _ where self is Bait:
             return String(describing: rawValue) + " шт."
         default:

@@ -16,6 +16,4 @@ enum FatalErrorMessages {
         case getItemsTypeError = "The Picker View got an array of unrelated type. Check function call."
         case saveItemTypeError = "The item doesn't match any of allowed types. Check types list."
     }
-    
-    
 }

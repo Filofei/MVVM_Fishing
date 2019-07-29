@@ -12,7 +12,7 @@ import Bond
 
 protocol InventoryViewModelType {
     var tackleStatus: Observable<String> { get }
-    var currentTackle: Tackle? { get set }
+    var currentTackle: Tackle { get set }
     var selectedSegment: Int { get set }
     var selectedIndexPath: IndexPath? { get set }
     func cellViewModel(forIndexPath indexPath: IndexPath) -> InventoryTableViewCellViewModelType?
@@ -21,4 +21,5 @@ protocol InventoryViewModelType {
     func selectRow(atIndexPath indexPath: IndexPath)
     func getStoredItems(type: ItemType.Type) -> [ItemType?]
     func convertStoredItems(items: [ItemType?]) -> [String]
+    func updateProperties()
 }

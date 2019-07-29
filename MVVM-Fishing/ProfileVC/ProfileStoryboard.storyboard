@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gbn-wN-Vz0">
-                                <rect key="frame" x="0.0" y="181" width="320" height="347"/>
+                                <rect key="frame" x="0.0" y="199.5" width="320" height="328.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" id="RYk-iq-1b6" customClass="ProfileTableViewCell" customModule="MVVM_Fishing" customModuleProvider="target">
@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PropertyValueLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-gq-3za">
-                                                    <rect key="frame" x="155" y="11" width="150" height="38"/>
+                                                    <rect key="frame" x="210" y="11" width="150" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-iY-rO3">
-                                <rect key="frame" x="112" y="70" width="95" height="95"/>
+                                <rect key="frame" x="103" y="70" width="114" height="113.5"/>
                                 <color key="backgroundColor" red="0.797046488" green="0.94390026999999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Iod-iY-rO3" secondAttribute="height" multiplier="1:1" id="5PA-cF-OyO"/>
@@ -92,9 +92,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XYi-T4-S1v" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="3eC-fu-p5B"/>
-                            <constraint firstItem="Iod-iY-rO3" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" constant="112" id="6DT-Dn-7yo"/>
                             <constraint firstItem="gj4-Wm-y09" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="8iC-ai-iK7"/>
                             <constraint firstItem="Gbn-wN-Vz0" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="BUY-to-Lqc"/>
+                            <constraint firstItem="Iod-iY-rO3" firstAttribute="height" secondItem="hgM-9v-yVr" secondAttribute="height" multiplier="0.2" id="Y7r-W3-7mW"/>
+                            <constraint firstItem="Iod-iY-rO3" firstAttribute="centerX" secondItem="lDx-68-xBt" secondAttribute="centerX" id="Yga-KO-wqV"/>
                             <constraint firstItem="Gbn-wN-Vz0" firstAttribute="top" secondItem="Iod-iY-rO3" secondAttribute="bottom" constant="16" id="dJC-6E-iB2"/>
                             <constraint firstItem="XYi-T4-S1v" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="drD-Lh-8LT"/>
                             <constraint firstItem="Gbn-wN-Vz0" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="eR9-E9-FLz"/>
@@ -103,7 +104,6 @@
                             <constraint firstItem="gj4-Wm-y09" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="gTk-xL-ufY"/>
                             <constraint firstItem="XYi-T4-S1v" firstAttribute="top" secondItem="hgM-9v-yVr" secondAttribute="top" id="iB3-Wp-qCg"/>
                             <constraint firstItem="Iod-iY-rO3" firstAttribute="top" secondItem="XYi-T4-S1v" secondAttribute="bottom" constant="20" id="xxR-Fu-iBH"/>
-                            <constraint firstItem="lDx-68-xBt" firstAttribute="trailing" secondItem="Iod-iY-rO3" secondAttribute="trailing" constant="113" id="zFp-6b-QfC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lDx-68-xBt"/>
                     </view>

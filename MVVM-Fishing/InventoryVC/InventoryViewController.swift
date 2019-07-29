@@ -7,11 +7,7 @@
 //
 
 import UIKit
-import ReactiveKit
-import Bond
 import RealmSwift
-import RxRealm
-import RxSwift
 
 class InventoryViewController: UIViewController {
 
@@ -27,22 +23,15 @@ class InventoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialize()
+        bindUI()
+    }
+    
+    private func initialize() {
         viewModel = InventoryViewModel()
         topView.parentViewController = self
         tableView.delegate = self
         tableView.dataSource = self
-        bindUI()
-    }
-    
-    private func bindUI() {
-        
-        viewModel?.tackleStatus.bind(to: tackleConditionLabel)
-        
-        segmentedControl.reactive.selectedSegmentIndex.observeNext { value in
-            self.viewModel?.selectedSegment = value
-        }
-            .dispose(in: bag)
-        
     }
 
 }

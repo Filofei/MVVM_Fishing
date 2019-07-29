@@ -131,7 +131,7 @@
                                                     <constraint firstAttribute="width" secondItem="im2-oU-w66" secondAttribute="height" multiplier="1:1" priority="999" id="alS-kF-C2p"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" title="Водоёмы">
                                                     <color key="titleColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -151,7 +151,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущая база: ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-R0-ccj">
-                                <rect key="frame" x="45" y="72" width="132.5" height="21"/>
+                                <rect key="frame" x="45" y="72" width="285" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fEw-TI-Ju2"/>
                                 </constraints>
@@ -170,8 +170,9 @@
                             <constraint firstItem="HCW-pW-cdX" firstAttribute="top" secondItem="bHv-R0-ccj" secondAttribute="bottom" constant="32" id="YNL-7q-3mG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TX9-Qv-kid" secondAttribute="bottom" constant="20" id="bRJ-M8-BUi"/>
                             <constraint firstItem="TX9-Qv-kid" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="196" id="eVV-1m-qfs"/>
+                            <constraint firstItem="bHv-R0-ccj" firstAttribute="trailing" secondItem="WXM-TE-Aem" secondAttribute="trailing" id="gJm-nx-3Tk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TX9-Qv-kid" secondAttribute="trailing" constant="16" id="hq5-R5-6Xv"/>
-                            <constraint firstItem="bHv-R0-ccj" firstAttribute="leading" secondItem="HCW-pW-cdX" secondAttribute="leading" id="twI-0O-lbR"/>
+                            <constraint firstItem="bHv-R0-ccj" firstAttribute="leading" secondItem="fFu-mM-jJT" secondAttribute="leading" id="twI-0O-lbR"/>
                             <constraint firstItem="TX9-Qv-kid" firstAttribute="top" secondItem="fFu-mM-jJT" secondAttribute="bottom" constant="48.5" id="vVF-2G-9lu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFu-mM-jJT" secondAttribute="trailing" constant="45" id="ze1-MG-qoW">
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>

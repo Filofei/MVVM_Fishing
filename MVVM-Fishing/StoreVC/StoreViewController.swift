@@ -26,10 +26,9 @@ class StoreViewController: UIViewController,  ScrollBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initialize()
         setAppearance()
-        bindUIElements()
+        bindUI()
     }
     
     private func initialize() {

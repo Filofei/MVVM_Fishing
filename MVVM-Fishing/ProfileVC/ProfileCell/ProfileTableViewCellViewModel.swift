@@ -19,8 +19,7 @@ class ProfileTableViewCellViewModel: ProfileTableViewCellViewModelType {
     var propertyValue: String {
         return userData.propertyValue ?? "TableViewCellVM Error"
     }
-    
-    
+        
     init(userData: UserField) {
         self.userData = userData
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol InventoryTableViewCellViewModelType: class {
+    var currentItem: ItemType? { get set }
     var index: Int { get set }
     var name: String { get }
     var value: String { get }
