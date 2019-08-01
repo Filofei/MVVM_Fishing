@@ -1,5 +1,5 @@
 //
-//  StoreViewControllerViewModelType.swift
+//  StoreViewModelType.swift
 //  MVVM-Fishing
 //
 //  Created by Роман Орлов on 04/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol StoreViewControllerViewModelType {
+protocol StoreViewModelType {
     var money: String { get set }
     var viewController: UIViewController? { get set }
     var chosenCategory: Int { get set }

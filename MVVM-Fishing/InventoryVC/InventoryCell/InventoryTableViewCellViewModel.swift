@@ -19,7 +19,7 @@ class InventoryTableViewCellViewModel: InventoryTableViewCellViewModelType {
     }
     
     var value: String {
-        return currentItem?.formattedValue() ?? ""
+        return currentItem?.formatValue() ?? ""
     }
     
     var image: UIImage? {

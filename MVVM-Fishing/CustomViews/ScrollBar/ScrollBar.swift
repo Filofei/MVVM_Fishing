@@ -18,7 +18,7 @@ import UIKit
     
     // MARK: Properties
     
-    /// The optional array containig all the cells of the ScrollBar. You can fill it through using function addCells(withImages: [UIImage], text: [String?]).
+    /// The optional array containig all the cells of the ScrollBar. You can fill it through using method addCells(withImages: [UIImage], text: [String?]).
     
     internal var cells: [ScrollBarCell] = [] {
         didSet {
@@ -57,7 +57,7 @@ import UIKit
     
     // MARK: Public methods
     
-    /// The crucial function in the class interface. Use it to fill the ScrollBar with data. You normally pass the array of images and an array of optional strings and the ScrollBar creates cells using them.
+    /// The crucial method in the class interface. Use it to fill the ScrollBar with data. You normally pass the array of images and an array of optional strings and the ScrollBar creates cells using them.
     
     public func addCells(withImages images: [UIImage?], text: [String?]) {
         for (index, image) in images.enumerated() {

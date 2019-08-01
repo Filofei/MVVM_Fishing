@@ -21,5 +21,5 @@ protocol InventoryViewModelType {
     func selectRow(atIndexPath indexPath: IndexPath)
     func getStoredItems(type: ItemType.Type) -> [ItemType?]
     func convertStoredItems(items: [ItemType?]) -> [String]
-    func updateProperties()
+    func updateTackleStatus()
 }

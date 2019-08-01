@@ -11,7 +11,7 @@ import Bond
 
 class ProfileViewController: UIViewController  {
 
-    var viewModel: ProfileViewModel?
+    var viewModel: ProfileViewModelType?
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: TopView!

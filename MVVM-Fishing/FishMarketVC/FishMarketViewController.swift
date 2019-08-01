@@ -8,7 +8,7 @@ class FishMarketViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: Properties
     
     @IBOutlet weak var tablewView: UITableView!
-    var viewModel: FishMarketViewModel?
+    var viewModel: FishMarketViewModelType?
 
     // MARK: Lifecycle Methods
     
@@ -17,7 +17,7 @@ class FishMarketViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tablewView.delegate = self
         tablewView.dataSource = self
-        
+        self.viewModel = FishMarketViewModel()
     }
     
     // MARK: Public methods

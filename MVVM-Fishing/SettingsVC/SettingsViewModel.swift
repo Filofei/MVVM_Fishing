@@ -1,9 +1,9 @@
 //
-//  SettingsVCViewModel.swift
+//  SettingsViewModel.swift
 
 import UIKit
 
-class SettingsVCViewModel: SettingsVCViewControllerViewModelType {
+class SettingsViewModel: SettingsViewControllerViewModelType {
     
     // MARK: Properties
     

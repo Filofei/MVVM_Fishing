@@ -11,6 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var toPondMenu: UIButton!
+    @IBOutlet var buttons: [UIButton]! {
+        willSet {
+            newValue.forEach {$0.layer.cornerRadius = 10}
+        }
+    }
     var viewModel: MainViewModel?
     override var prefersStatusBarHidden: Bool {
         return true

@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-MVVM-Fishing/Pods-MVVM-Fishing-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Bond/Bond.framework
+${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework
 ${BUILT_PRODUCTS_DIR}/Differ/Differ.framework
 ${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework
 ${BUILT_PRODUCTS_DIR}/Realm/Realm.framework

@@ -9,7 +9,7 @@
 import Foundation
 
 extension ItemType {
-    func formattedValue() -> String {
+    func formatValue() -> String {
         let rawValue = self.value
         switch self {
         case _ where self is Rod:

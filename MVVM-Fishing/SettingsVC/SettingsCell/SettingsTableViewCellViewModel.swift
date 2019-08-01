@@ -1,9 +1,9 @@
 //
-//  SettingsVCTableViewCellViewModel.swift
+//  SettingsTableViewCellViewModel.swift
 
 import Foundation
 
-class SettingsVCTableViewCellViewModel: SettingsVCTableViewCellViewModelType {
+class SettingsTableViewCellViewModel: SettingsTableViewCellViewModelType {
     
     // MARK: Properties
     

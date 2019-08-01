@@ -12,7 +12,7 @@ import RealmSwift
 
 class StoreViewController: UIViewController,  ScrollBarDelegate {
 
-    var viewModel: StoreViewControllerViewModelType?
+    var viewModel: StoreViewModelType?
     @IBOutlet weak var purchaseButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollBar: ScrollBar!

@@ -1,14 +1,14 @@
 //
-//  SettingsVCViewController.swift
+//  SettingsViewController.swift
 
 import UIKit
 
-class SettingsVCViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     // MARK: Properties
     
     @IBOutlet weak var tablewView: UITableView!
-    var viewModel: SettingsVCViewModel?
+    var viewModel: SettingsViewModel?
 
     // MARK: Lifecycle Methods
     

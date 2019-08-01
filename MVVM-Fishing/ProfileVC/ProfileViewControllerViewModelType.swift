@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol ProfileViewModelType {
+    func userFields() -> [UserField]
+    func numberOfRows() -> Int
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> ProfileTableViewCellViewModelType?
+}

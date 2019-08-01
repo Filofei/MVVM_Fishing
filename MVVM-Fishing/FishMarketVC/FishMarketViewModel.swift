@@ -3,7 +3,7 @@
 
 import UIKit
 
-class FishMarketViewModel: FishMarketViewControllerViewModelType {
+class FishMarketViewModel: FishMarketViewModelType {
     
     // MARK: Properties
     

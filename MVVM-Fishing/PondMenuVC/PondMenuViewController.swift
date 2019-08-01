@@ -10,7 +10,7 @@ import UIKit
 
 class PondMenuViewController: UIViewController {
 
-    var viewModel: PondMenuViewModel?
+    var viewModel: PondMenuViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()

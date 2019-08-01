@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ProfileViewModel {
+class ProfileViewModel: ProfileViewModelType {
     
     private let realm = try! Realm()
     
@@ -30,7 +30,11 @@ class ProfileViewModel {
                 continue
             }
             element.propertyName = convertPropertyName(child.label)
-            element.propertyValue = String(describing: child.value)
+            if child.label == "money" {
+                element.propertyValue = String(describing: child.value) + "₽"
+            } else {
+                element.propertyValue = String(describing: child.value)
+            }
             output.append(element)
         }
         return output

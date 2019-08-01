@@ -12,4 +12,5 @@ target 'MVVM-Fishing' do
     pod 'Bond'
     pod 'TinyConstraints'
     pod 'lottie-ios'
+    pod 'CenteredCollectionView'
 end

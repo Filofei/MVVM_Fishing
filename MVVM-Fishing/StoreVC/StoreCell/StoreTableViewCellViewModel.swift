@@ -17,15 +17,7 @@ class TableViewCellViewModel: StoreTableViewCellViewModelType {
     }
     
     var price: String {
-        let rawPrice = items.price
-        switch rawPrice {
-        case _ where rawPrice > 1_000_000:
-            return String(describing: rawPrice / 1_000_000) + "кк руб."
-        case _ where rawPrice > 1_000:
-            return String(describing: rawPrice / 1_000) + "к руб."
-        default:
-            return String(describing: rawPrice) + " руб."
-        }
+        return items.price.formatAsMoney()
     }
     
     var name: String {
@@ -33,7 +25,7 @@ class TableViewCellViewModel: StoreTableViewCellViewModelType {
     }
     
     var value: String {
-        return items.formattedValue()
+        return items.formatValue()
     }
     
     init(items: ItemType) {

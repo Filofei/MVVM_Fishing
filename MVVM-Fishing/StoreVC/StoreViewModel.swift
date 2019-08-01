@@ -11,7 +11,7 @@ import ReactiveKit
 import RealmSwift
 
 
-class StoreViewModel: StoreViewControllerViewModelType {
+class StoreViewModel: StoreViewModelType {
     
     private let realm = try! Realm()
     
@@ -26,14 +26,7 @@ class StoreViewModel: StoreViewControllerViewModelType {
     dynamic var money: String {
         get {
             let rawMoney = try! Realm().object(ofType: User.self, forPrimaryKey: "user")?.money ?? 0
-            switch rawMoney {
-            case _ where rawMoney > 1_000_000:
-                return String("\(rawMoney / 1_000_000)" + "кк руб.")
-            case _ where rawMoney > 1_000:
-                return String("\(rawMoney / 1_000)" + "к руб.")
-            default:
-                return String("\(rawMoney)" + " руб.")
-            }
+            return rawMoney.formatAsMoney()
         }
         set {
             

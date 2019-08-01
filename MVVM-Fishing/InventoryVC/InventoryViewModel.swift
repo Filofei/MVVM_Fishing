@@ -47,7 +47,7 @@ class InventoryViewModel: InventoryViewModelType {
         return InventoryTypes.types.count
     }
     
-    /// This method shows pickerview for choosing the element of the tackle.
+    /// This method initializes and shows pickerview for choosing the element of the tackle.
     
     func showPickerView(in controller: UIViewController, for type: ItemType.Type) {
         
@@ -69,7 +69,7 @@ class InventoryViewModel: InventoryViewModelType {
         let pickerViewSelectedValue: PickerViewViewController.Index = (column: 0, row: setPickerViewInitialValue())
         let action = UIAlertAction(title: "Готово", style: .default) { _ in
             self.currentTackle.checkCompletion()
-            self.updateProperties()
+            self.updateTackleStatus()
         }
         alert.addPickerView(values: pickerViewValues, initialSelection: pickerViewSelectedValue) { vc, picker, index, values in
             self.updateTackleElement(items: items, index: index.row)
@@ -97,7 +97,7 @@ class InventoryViewModel: InventoryViewModelType {
         var convertedItems: [String] = []
         for (_, value) in items.enumerated() {
             if let value = value {
-                convertedItems.append(value.name + " " + String(value.formattedValue()))
+                convertedItems.append(value.name + " " + String(value.formatValue()))
             } else {
                 convertedItems.append("Нет")
             }
@@ -107,7 +107,7 @@ class InventoryViewModel: InventoryViewModelType {
     
     /* #IMPORTANT: This function is not elegant and ought to be refactored! */
     
-    /// This function adds selected element of the tackle to the tackle.
+    /// This method adds selected element of the tackle to the tackle.
 
     func updateTackleElement(items: [ItemType?], index: Int) {
         
@@ -130,12 +130,14 @@ class InventoryViewModel: InventoryViewModelType {
         }
     }
     
+    /// This method returns a string to be displayed in status label.
+    
     func stringForTackleStatus(_ status: Bool) -> String {
         let initialString = status ? StaticStrings.InventoryVM.tackleReady : StaticStrings.InventoryVM.tackleNotReady
         return initialString
     }
     
-    func updateProperties() {
+    func updateTackleStatus() {
         self.tackleStatus.value = (self.stringForTackleStatus(self.currentTackle.complete))
     }
 

@@ -18,6 +18,14 @@
             </objects>
             <point key="canvasLocation" x="191" y="622"/>
         </scene>
+        <!--PondsViewController-->
+        <scene sceneID="l3C-ks-tx8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PondsStoryboard" referencedIdentifier="PondsViewController" id="swH-LZ-QZ0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7T-3W-HrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="620"/>
+        </scene>
         <!--StoreViewController-->
         <scene sceneID="Vcj-ht-0mO">
             <objects>
@@ -50,8 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX9-Qv-kid">
-                                <rect key="frame" x="196" y="611" width="163" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX9-Qv-kid">
+                                <rect key="frame" x="45" y="592.5" width="285" height="44.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Go fishing!">
                                     <color key="titleColor" red="0.20074689837351237" green="0.40149379674702473" blue="0.24941240577334281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,6 +142,9 @@
                                                 <state key="normal" title="Водоёмы">
                                                     <color key="titleColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="swH-LZ-QZ0" kind="presentation" id="eDe-cF-FsZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-7O-eQQ">
                                                 <rect key="frame" x="0.0" y="305" width="132.5" height="132.5"/>
@@ -166,14 +177,15 @@
                             <constraint firstItem="fFu-mM-jJT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="F1l-Ie-TnG">
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
+                            <constraint firstItem="bHv-R0-ccj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="HdJ-6U-ynU"/>
+                            <constraint firstItem="TX9-Qv-kid" firstAttribute="trailing" secondItem="WXM-TE-Aem" secondAttribute="trailing" id="T5m-Zd-bh8"/>
                             <constraint firstItem="fFu-mM-jJT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VSh-Nw-ymG"/>
                             <constraint firstItem="HCW-pW-cdX" firstAttribute="top" secondItem="bHv-R0-ccj" secondAttribute="bottom" constant="32" id="YNL-7q-3mG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TX9-Qv-kid" secondAttribute="bottom" constant="20" id="bRJ-M8-BUi"/>
-                            <constraint firstItem="TX9-Qv-kid" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="196" id="eVV-1m-qfs"/>
+                            <constraint firstItem="TX9-Qv-kid" firstAttribute="leading" secondItem="8J2-lC-Imc" secondAttribute="leading" id="ZA5-uq-G01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TX9-Qv-kid" secondAttribute="bottom" constant="30" id="bRJ-M8-BUi"/>
                             <constraint firstItem="bHv-R0-ccj" firstAttribute="trailing" secondItem="WXM-TE-Aem" secondAttribute="trailing" id="gJm-nx-3Tk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TX9-Qv-kid" secondAttribute="trailing" constant="16" id="hq5-R5-6Xv"/>
                             <constraint firstItem="bHv-R0-ccj" firstAttribute="leading" secondItem="fFu-mM-jJT" secondAttribute="leading" id="twI-0O-lbR"/>
-                            <constraint firstItem="TX9-Qv-kid" firstAttribute="top" secondItem="fFu-mM-jJT" secondAttribute="bottom" constant="48.5" id="vVF-2G-9lu"/>
+                            <constraint firstItem="TX9-Qv-kid" firstAttribute="top" secondItem="fFu-mM-jJT" secondAttribute="bottom" constant="30" id="vVF-2G-9lu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFu-mM-jJT" secondAttribute="trailing" constant="45" id="ze1-MG-qoW">
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
@@ -182,6 +194,12 @@
                     </view>
                     <connections>
                         <outlet property="toPondMenu" destination="TX9-Qv-kid" id="ugJ-S9-2F9"/>
+                        <outletCollection property="buttons" destination="HCW-pW-cdX" collectionClass="NSMutableArray" id="NPF-eb-oaO"/>
+                        <outletCollection property="buttons" destination="JpM-JA-dDy" collectionClass="NSMutableArray" id="CIh-9k-mNU"/>
+                        <outletCollection property="buttons" destination="HrX-4z-WQJ" collectionClass="NSMutableArray" id="z8G-7w-kgl"/>
+                        <outletCollection property="buttons" destination="im2-oU-w66" collectionClass="NSMutableArray" id="9ig-K8-SFf"/>
+                        <outletCollection property="buttons" destination="cnF-b1-fSp" collectionClass="NSMutableArray" id="p6Z-77-IAw"/>
+                        <outletCollection property="buttons" destination="dUH-7O-eQQ" collectionClass="NSMutableArray" id="1pF-kh-fMi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,8 +13,8 @@ extension InventoryViewController {
     
     func bindUI() {
     
-    viewModel?.tackleStatus.bind(to: tackleConditionLabel.reactive.text)
-    viewModel?.tackleStatus.observeNext { _ in
+    self.viewModel?.tackleStatus.bind(to: tackleConditionLabel.reactive.text)
+    self.viewModel?.tackleStatus.observeNext { _ in
         self.tableView.reloadData()
         }
         .dispose(in: bag)
@@ -22,10 +22,10 @@ extension InventoryViewController {
     
     segmentedControl.reactive.selectedSegmentIndex.observeNext { value in
         self.viewModel?.selectedSegment = value
-        self.viewModel?.updateProperties()
+        self.viewModel?.updateTackleStatus()
         }
         .dispose(in: bag)
-}
+    }
     
 }
 

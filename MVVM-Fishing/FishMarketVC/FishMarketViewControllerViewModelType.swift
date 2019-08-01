@@ -1,8 +1,8 @@
 //
-//  FishMarketViewControllerViewModelType.swift
+//  FishMarketViewModelType.swift
 
 import Foundation
 
-protocol FishMarketViewControllerViewModelType {
+protocol FishMarketViewModelType {
     
 }

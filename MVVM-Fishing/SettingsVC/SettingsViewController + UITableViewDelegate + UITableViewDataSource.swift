@@ -1,9 +1,9 @@
 //
-//  SettingsVCViewController + UITableViewDelegate + UITableViewDataSource.swift
+//  SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift
 
 import UIKit
 
-extension SettingsVCViewController: UITableViewDelegate, UITableViewDataSource {
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     // Implement all TableViewDelegate and TableViewDataSource methods. The methods below are mandatory.
     

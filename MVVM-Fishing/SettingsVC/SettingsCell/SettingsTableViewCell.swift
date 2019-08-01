@@ -1,9 +1,9 @@
 //
-//  SettingsVCTableViewCell.swift
+//  SettingsTableViewCell.swift
 
 import UIKit
 
-class SettingsVCTableViewCell: UITableViewCell {
+class SettingsTableViewCell: UITableViewCell {
     
     // MARK: Properties
     
@@ -16,7 +16,7 @@ class SettingsVCTableViewCell: UITableViewCell {
     weak var viewModel: StoreTableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
-            /* Bind your SettingsVCCellViewModel properties to to this SettingsVCTableViewCell outlets.
+            /* Bind your SettingsCellViewModel properties to to this SettingsTableViewCell outlets.
  
             #EXAMPLE: self.label.text = viewModel.name
  
