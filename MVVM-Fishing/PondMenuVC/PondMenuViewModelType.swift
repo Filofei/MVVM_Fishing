@@ -9,5 +9,8 @@
 import Foundation
 
 protocol PondMenuViewModelType {
+    var currentBase: Base { get }
+    var numberOfRows: Int { get }
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> PondMenuTableViewCellViewModelType?
     
 }

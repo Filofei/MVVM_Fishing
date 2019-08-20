@@ -17,15 +17,13 @@ import TinyConstraints
         case verticalInset = 7
         case horizontalInset = 10
     }
-    private let textColor =
-        UIColor(hue: 115/360, saturation: 0.39, brightness: 0.5, alpha: 1)
-    private let bgColor =
-        UIColor(hue: 134/360, saturation: 0.14, brightness: 0.80, alpha: 1)
+    private let textColor = Palette.darkGreen
+    private let bgColor = Palette.backgroundGreen
     public var backButton = UIButton.init(type: .system)
     public var settingsButton = UIButton.init(type: .system)
     public var timeLabel = UILabel()
     var useDefaultSecondButtonController: Bool = true
-    var parentViewController: UIViewController?
+    weak var parentViewController: UIViewController?
     var secondButtonViewController: UIViewController?
     var buttons: [UIButton]?
 
@@ -65,7 +63,7 @@ import TinyConstraints
             self.addSubview($0)
             $0.tintColor = textColor
             $0.aspectRatio(2.5)
-            $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+            $0.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
             $0.centerYToSuperview()
         }
         
@@ -94,6 +92,7 @@ import TinyConstraints
         label.leftToRight(of: backButton)
         label.rightToLeft(of: settingsButton)
         label.textColor = textColor
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textAlignment = .center
         label.text = "00:00"
     }

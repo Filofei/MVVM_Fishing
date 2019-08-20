@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Bond
 
 protocol StoreViewModelType {
     var money: String { get set }

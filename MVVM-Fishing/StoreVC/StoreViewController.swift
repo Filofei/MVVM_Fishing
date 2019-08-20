@@ -13,16 +13,14 @@ import RealmSwift
 class StoreViewController: UIViewController,  ScrollBarDelegate {
 
     var viewModel: StoreViewModelType?
+    var appearanceManager: AppearanceManager?
+
     @IBOutlet weak var purchaseButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollBar: ScrollBar!
     @IBOutlet weak var topView: TopView!
     @IBOutlet weak var moneyLabel: UILabel!
     let realm = try! Realm()
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +30,7 @@ class StoreViewController: UIViewController,  ScrollBarDelegate {
     }
     
     private func initialize() {
+        appearanceManager = AppearanceManager(in: self)
         viewModel = StoreViewModel()
         viewModel?.viewController = self
         

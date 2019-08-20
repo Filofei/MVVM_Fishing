@@ -23,21 +23,7 @@ extension PondsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return viewModel?.numberOfRows() ?? 1
     }
     
-    // FIXME: Correct cell scaling method!
-   /* func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard let _ = self.centeredCollectionViewFlowLayout?.currentCenteredPage else {
-            return
-        }
-        self.collectionView.visibleCells.enumerated().forEach { (index, value) in
-            if value.frame.contains(self.view.center) {
-                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
-                    value.transform = .init(scaleX: 1.1, y: 1.1)
-                }, completion: nil)
-            } else if !value.frame.contains(self.view.center) {
-                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: {
-                    value.transform = .identity
-                }, completion: nil)
-            }
-        }
-    } */
+   func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.changeButtonState()
+    }
 }

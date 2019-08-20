@@ -12,7 +12,7 @@ import UIKit
 
 struct Base {
     
-    let image: UIImage
+    let image: UIImage?
     
     let name: String
     /// An array of all the locations of this base.

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Bond
 
 extension StoreViewController {
         
     func bindUI() {
+                
         purchaseButton.reactive.tap
             .observeNext {
                 self.viewModel?.addToInventory(completion: {
@@ -24,6 +26,12 @@ extension StoreViewController {
     
     func setAppearance() {
         
+        self.appearanceManager?.setBackgroundColor()
+        
+        // TableView appearance
+        
+        self.tableView.tableFooterView = UIView()
+        
         // ScrollBar appearance
         
         scrollBar.height = 70
@@ -31,15 +39,11 @@ extension StoreViewController {
             $0.label.textColor = Palette.darkGreen
         }
         
-        // TopView appearance
-        
-        topView.timeLabel.textColor = Palette.darkGreen
-        topView.buttons?.forEach {
-            $0.tintColor = Palette.darkGreen
-        }
-        
         // Other appearance
         
-        moneyLabel.textColor = Palette.darkGreen
+        moneyLabel.textColor = Palette.darkGray
+        moneyLabel.backgroundColor = Palette.backgroundGreen
+        purchaseButton.backgroundColor = Palette.backgroundGreen
+        purchaseButton.titleLabel?.textColor = Palette.darkGreen
     }
 }

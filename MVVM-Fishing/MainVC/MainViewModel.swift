@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import RealmSwift
+import Bond
 
 class MainViewModel {
     
     // MARK: Properties
     
+    private let realm = try! Realm()
+        
     private let defaultsManager = DefaultsManager()
+    
     private var disclamerAlert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+    
+    /// The base on which user is currently on
+    
+    var currentBase: String {
+        var output: String = ""
+        if let user = realm.object(ofType: User.self, forPrimaryKey: "user") {
+            output += user.currentBase
+        }
+        return output
+    }
     
     // MARK: Private methods
     

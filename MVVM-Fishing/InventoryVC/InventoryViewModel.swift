@@ -16,17 +16,17 @@ class InventoryViewModel: InventoryViewModelType {
     
     private let realm = try! Realm()
     
-    internal var selectedIndexPath: IndexPath?
+    public var selectedIndexPath: IndexPath?
     
-    internal var tackleStatus: Observable<String>
+    public var tackleStatus: Observable<String>
     
-    internal var selectedSegment: Int = 0 {
+    public var selectedSegment: Int = 0 {
         willSet {
             currentTackle = realm.object(ofType: Tackle.self, forPrimaryKey: MainPrimaryKeys.tackles[newValue]) ?? Tackle()
         }
     }
     
-    internal var currentTackle: Tackle
+    public var currentTackle: Tackle
     
     init() {
         self.currentTackle = realm.object(ofType: Tackle.self, forPrimaryKey: MainPrimaryKeys.tackles[self.selectedSegment]) ?? Tackle()
@@ -53,7 +53,6 @@ class InventoryViewModel: InventoryViewModelType {
         
         let alert = UIAlertController(style: .alert, title: StaticStrings.InventoryVM.pickerViewTitle, message: InventoryTypes.name[InventoryTypes.types.firstIndex{$0 == type} ?? 0])
         
-        // ADD CURRENT TYPE
         let items = getStoredItems(type: type)
         func setPickerViewInitialValue() -> Int {
             var output: Int = 0

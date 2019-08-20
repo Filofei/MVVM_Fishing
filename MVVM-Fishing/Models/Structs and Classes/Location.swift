@@ -17,17 +17,22 @@ struct Location {
     let name: String
     
     let base: Bases
+    
     /// The average depth of the location.
+    
     var averageDepth: Int {
         get {
             return (minDepth + maxDepth)/2
         }
     }
     
+    var depthMap: DepthMap {
+        return DepthMapGenerator.generateMap(minDepth, maxDepth, numberOfRows)
+    }
+    
     let minDepth: Int
     let maxDepth: Int
     /// The number 
     let numberOfRows: Int
-    var depthMap: DepthMap
     var fishPopulation: FishPopulation
 }

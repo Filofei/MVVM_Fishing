@@ -7,16 +7,17 @@
 //
 
 import UIKit
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let defaultsManager = DefaultsManager()
+    private let realmManager = RealmManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        initializeUserRealmData()
-        let defaultsManager = DefaultsManager()
+        realmManager.initializeUserRealmData()
+        realmManager.checkForObsoleteData()
         defaultsManager.saveNumberOfLaunches(key: DefaultsKeys.numberOfLaunches.rawValue)
         
         return true
@@ -44,22 +45,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    private func initializeUserRealmData() {
-        let realm = try! Realm()
-        print(realm.configuration.fileURL!)
-        try! realm.write {
-            //realm.deleteAll()
-            if realm.objects(User.self).isEmpty {
-                realm.add(User())
-            }
-            if realm.objects(Tackle.self).isEmpty {
-                (0...1).forEach {
-                    realm.add(Tackle(id: MainPrimaryKeys.tackles[$0]))
-                }
-            }
-        }
-    }
-
-
 }
 

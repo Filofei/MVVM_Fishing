@@ -27,6 +27,11 @@ extension InventoryViewController {
         .dispose(in: bag)
     }
     
+    func setAppearance() {
+        self.tableView.tableFooterView = UIView()
+        self.appearanceManager?.setBackgroundColor()
+    }
+    
 }
 
 

@@ -14,11 +14,11 @@ struct LocationsData {
     
     // TODO: Correct depth map and fish population.
     static let locations: [[Location]] = [
-        [Location(image: UIImage(), name: "Мостик на пруду", base: Bases.country, minDepth: 20, maxDepth: 140, numberOfRows: 5, depthMap: DepthMap(), fishPopulation: FishPopulation()),
-         Location(image: UIImage(), name: "Тихая заводь", base: Bases.country, minDepth: 10, maxDepth: 100, numberOfRows: 7, depthMap: DepthMap(), fishPopulation: FishPopulation())],
-        [Location(image: UIImage(), name: "Набережная", base: Bases.moscowRiver, minDepth: 80, maxDepth: 250, numberOfRows: 7, depthMap: DepthMap(), fishPopulation: FishPopulation()),
-         Location(image: UIImage(), name: "Быстрое течение", base: Bases.moscowRiver, minDepth: 100, maxDepth: 300, numberOfRows: 10, depthMap: DepthMap(), fishPopulation: FishPopulation())],
-        [Location(image: UIImage(), name: "Камыши", base: Bases.platnik, minDepth: 30, maxDepth: 160, numberOfRows: 8, depthMap: DepthMap(), fishPopulation: FishPopulation()),
-         Location(image: UIImage(), name: "У развилки", base: Bases.platnik, minDepth: 50, maxDepth: 320, numberOfRows: 10, depthMap: DepthMap(), fishPopulation: FishPopulation())]
+        [Location(image: UIImage(), name: "Мостик на пруду", base: Bases.country, minDepth: 20, maxDepth: 140, numberOfRows: 5, fishPopulation: FishPopulation()),
+         Location(image: UIImage(), name: "Тихая заводь", base: Bases.country, minDepth: 10, maxDepth: 100, numberOfRows: 7, fishPopulation: FishPopulation())],
+        [Location(image: UIImage(), name: "Набережная", base: Bases.moscowRiver, minDepth: 80, maxDepth: 250, numberOfRows: 7, fishPopulation: FishPopulation()),
+         Location(image: UIImage(), name: "Быстрое течение", base: Bases.moscowRiver, minDepth: 100, maxDepth: 350, numberOfRows: 10, fishPopulation: FishPopulation())],
+        [Location(image: UIImage(), name: "Синяя гладь", base: Bases.platnik, minDepth: 0, maxDepth: 300, numberOfRows: 7, fishPopulation: FishPopulation()),
+         Location(image: UIImage(), name: "У развилки", base: Bases.platnik, minDepth: 50, maxDepth: 320, numberOfRows: 10, fishPopulation: FishPopulation())]
     ]
 }

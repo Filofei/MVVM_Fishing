@@ -11,14 +11,19 @@ import UIKit
 class StoreTableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemImageView: UIImageView! {
-        didSet {
-            itemImageView.backgroundColor = .gray
-            itemImageView.layer.cornerRadius = 10
+        willSet {
+            newValue.backgroundColor = .lightGray
+            newValue.layer.cornerRadius = newValue.frame.height / 4
         }
     }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var propertyLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var itemExistenceIndicatorView: UIView! {
+        willSet {
+            newValue.layer.cornerRadius = newValue.frame.height / 2
+        }
+    }
     
     weak var viewModel: StoreTableViewCellViewModelType? {
         willSet(viewModel) {
@@ -29,6 +34,30 @@ class StoreTableViewCell: UITableViewCell {
             nameLabel.text = viewModel.name
             propertyLabel.text = viewModel.value
             priceLabel.text = viewModel.price
+            UIView.animate(withDuration: 0.1) {
+                self.itemExistenceIndicatorView.backgroundColor = self.colorForItemExistenceIndicator(viewModel.alreadyExists)
+            }
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
+                self.backgroundColor = UIColor(white: 0.9, alpha: 1)
+            }, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
+                self.backgroundColor = .white
+            }, completion: nil)
+        }
+    }
+    
+    func colorForItemExistenceIndicator(_ status: Bool) -> UIColor {
+        switch status {
+        case true:
+            return Palette.mediumGreen
+        default:
+            return .clear
         }
     }
 }

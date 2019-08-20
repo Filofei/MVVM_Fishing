@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,27 +15,106 @@
             <objects>
                 <viewController storyboardIdentifier="PondMenuViewController" id="BG0-fo-sq9" customClass="PondMenuViewController" customModule="MVVM_Fishing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G6d-4a-gSq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PondMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfN-La-3JQ">
-                                <rect key="frame" x="146" y="333" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8P-Wq-2Qc">
+                                <rect key="frame" x="0.0" y="70" width="320" height="409"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-IO-TpW">
+                                        <rect key="frame" x="16" y="16" width="288" height="277"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="platnik_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="utk-6b-WlR">
+                                                <rect key="frame" x="0.0" y="0.0" width="139" height="277"/>
+                                            </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aof-FZ-qY1">
+                                                <rect key="frame" x="149" y="0.0" width="139" height="277"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PondMenuCell" id="tDH-Ih-l7p" customClass="PondMenuTableViewCell" customModule="MVVM_Fishing" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="139" height="55"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDH-Ih-l7p" id="afx-i7-Jyv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="139" height="54.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название локации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="2hV-QD-xIl">
+                                                                    <rect key="frame" x="15" y="11" width="109" height="33"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="2hV-QD-xIl" firstAttribute="top" secondItem="afx-i7-Jyv" secondAttribute="topMargin" id="LMc-1d-ZwZ"/>
+                                                                <constraint firstItem="2hV-QD-xIl" firstAttribute="leading" secondItem="afx-i7-Jyv" secondAttribute="leadingMargin" id="kiJ-Jy-Psa"/>
+                                                                <constraint firstItem="2hV-QD-xIl" firstAttribute="trailing" secondItem="afx-i7-Jyv" secondAttribute="trailingMargin" id="kux-Eg-j0c"/>
+                                                                <constraint firstItem="2hV-QD-xIl" firstAttribute="bottom" secondItem="afx-i7-Jyv" secondAttribute="bottomMargin" id="veQ-Pz-Pyo"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="locationNameLabel" destination="2hV-QD-xIl" id="QIq-BH-ay0"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pgf-IO-TpW" secondAttribute="height" multiplier="288:277" id="V5f-IP-KD4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pgf-IO-TpW" firstAttribute="leading" secondItem="b8P-Wq-2Qc" secondAttribute="leading" constant="16" id="0sy-pu-sTd"/>
+                                    <constraint firstItem="Pgf-IO-TpW" firstAttribute="top" secondItem="b8P-Wq-2Qc" secondAttribute="top" constant="16" id="8uf-bn-9sy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pgf-IO-TpW" secondAttribute="trailing" constant="16" id="qCW-e2-101"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfn-Q3-7gK" customClass="TopView" customModule="MVVM_Fishing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.80815446160000004" green="0.90164811639999998" blue="0.83098460200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LGv-ud-yAE"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-Dx-6sW">
+                                <rect key="frame" x="73.5" y="504" width="173" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="0l2-B0-x1W"/>
+                                    <constraint firstAttribute="width" constant="173" id="Efx-nS-1FI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Идти на локацию"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LfN-La-3JQ" firstAttribute="centerX" secondItem="DNj-U7-ZNy" secondAttribute="centerX" id="FFH-4I-HDq"/>
-                            <constraint firstItem="LfN-La-3JQ" firstAttribute="centerY" secondItem="DNj-U7-ZNy" secondAttribute="centerY" id="Ycp-NI-SqQ"/>
+                            <constraint firstItem="Cfn-Q3-7gK" firstAttribute="trailing" secondItem="DNj-U7-ZNy" secondAttribute="trailing" id="7QR-PR-OYs"/>
+                            <constraint firstItem="DNj-U7-ZNy" firstAttribute="bottom" secondItem="Vaz-Dx-6sW" secondAttribute="bottom" constant="25" id="9Cj-jO-DY8"/>
+                            <constraint firstItem="b8P-Wq-2Qc" firstAttribute="trailing" secondItem="DNj-U7-ZNy" secondAttribute="trailing" id="RVO-Qu-3nU"/>
+                            <constraint firstItem="Cfn-Q3-7gK" firstAttribute="top" secondItem="DNj-U7-ZNy" secondAttribute="top" id="TiW-fD-FlV"/>
+                            <constraint firstItem="b8P-Wq-2Qc" firstAttribute="top" secondItem="Cfn-Q3-7gK" secondAttribute="bottom" id="Wy0-bO-uqt"/>
+                            <constraint firstItem="Vaz-Dx-6sW" firstAttribute="top" secondItem="b8P-Wq-2Qc" secondAttribute="bottom" constant="25" id="cza-ul-Ys3"/>
+                            <constraint firstItem="b8P-Wq-2Qc" firstAttribute="leading" secondItem="DNj-U7-ZNy" secondAttribute="leading" id="h09-fY-M7u"/>
+                            <constraint firstItem="Cfn-Q3-7gK" firstAttribute="leading" secondItem="DNj-U7-ZNy" secondAttribute="leading" id="jw6-0K-v1J"/>
+                            <constraint firstItem="Vaz-Dx-6sW" firstAttribute="centerX" secondItem="DNj-U7-ZNy" secondAttribute="centerX" id="zr3-xf-TUT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNj-U7-ZNy"/>
                     </view>
+                    <connections>
+                        <outlet property="goToLocationButton" destination="Vaz-Dx-6sW" id="H5P-T5-Cmy"/>
+                        <outlet property="locationImageView" destination="utk-6b-WlR" id="2J4-QK-RAn"/>
+                        <outlet property="tableView" destination="aof-FZ-qY1" id="TpS-fk-2UE"/>
+                        <outlet property="topView" destination="Cfn-Q3-7gK" id="ecM-3v-0qj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bag-SW-sdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1476" y="-1331"/>
+            <point key="canvasLocation" x="-1477.5" y="-1332.0422535211267"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="platnik_1.jpg" width="1245" height="2489"/>
+    </resources>
 </document>

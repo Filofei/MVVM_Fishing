@@ -13,7 +13,7 @@ class SettingsTableViewCell: UITableViewCell {
      
     */
     
-    weak var viewModel: StoreTableViewCellViewModelType? {
+    weak var viewModel: SettingsTableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
             /* Bind your SettingsCellViewModel properties to to this SettingsTableViewCell outlets.

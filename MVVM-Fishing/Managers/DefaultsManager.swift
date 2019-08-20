@@ -9,6 +9,7 @@
 import Foundation
 
 /// This enum contains UserDefaults keys as raw values.
+
 public enum DefaultsKeys: String {
     case numberOfLaunches = "numberOfLaunches"
 }
@@ -27,6 +28,7 @@ class DefaultsManager {
     }
     
     /// This method saves and logs the state of the value for certain key.
+    
     public func saveValue(_ key: String, _ value: Any) {
         if let oldValue = defaults.value(forKey: key) {
             print("""
@@ -42,7 +44,9 @@ class DefaultsManager {
             defaults.set(value, forKey: key)
         }
     }
+    
     /// This method retrieves and logs the value for certain key.
+    
     public func retrieveValue(_ key: String) -> Any? {
         var value: Any?
         if let currentValue = defaults.value(forKey: key) {

@@ -2,6 +2,8 @@
 //  PondsViewController.swift
 
 import UIKit
+import Lottie
+import RealmSwift
 import CenteredCollectionView
 
 class PondsViewController: UIViewController {
@@ -11,8 +13,18 @@ class PondsViewController: UIViewController {
     @IBOutlet weak var topView: TopView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var userMoneyLabel: UILabel!
+    @IBOutlet weak var userLevelLabel: UILabel!
+    @IBOutlet weak var travelAnimationView: AnimationView!
+    @IBOutlet weak var headToBaseButton: UIButton! {
+        willSet {
+            newValue.layer.cornerRadius = newValue.frame.height / 2
+        }
+    }
     
     var viewModel: PondsViewModelType?
+    var appearanceManager: AppearanceManager?
+    private var token: NotificationToken?
+    private let realm = try! Realm()
     var centeredCollectionViewFlowLayout: CenteredCollectionViewFlowLayout?
     
     // MARK: Lifecycle Methods
@@ -20,7 +32,14 @@ class PondsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        updateUI()
         bindUI()
+        setAppearance()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        focusCurrentBase()
     }
     
     // MARK: Public methods
@@ -30,11 +49,16 @@ class PondsViewController: UIViewController {
     // MARK: Private methods
     
     private func initialize() {
-        viewModel = PondsViewModel()
-        topView.parentViewController = self
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        setupCollectionViewFlowLayout(withCellRatio: 0.7)
+        self.appearanceManager = AppearanceManager(in: self)
+        self.viewModel = PondsViewModel()
+        self.viewModel?.viewController = self
+        self.topView.parentViewController = self
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.setupCollectionViewFlowLayout(withCellRatio: 0.7)
+        token = realm.observe { (notification, realm) in
+            self.updateUI()
+        }
     }
     
     private func setupCollectionViewFlowLayout(withCellRatio ratio: CGFloat) {
@@ -55,7 +79,6 @@ class PondsViewController: UIViewController {
         collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         
         centeredCollectionViewFlowLayout?.minimumLineSpacing = 35
-
     }
 
 }

@@ -12,26 +12,25 @@ import RealmSwift
 class InventoryViewController: UIViewController {
 
     var viewModel: InventoryViewModelType?
+    var appearanceManager: AppearanceManager?
     @IBOutlet weak var topView: TopView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tackleConditionLabel: UILabel!
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        setAppearance()
         bindUI()
     }
     
     private func initialize() {
-        viewModel = InventoryViewModel()
-        topView.parentViewController = self
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.appearanceManager = AppearanceManager(in: self)
+        self.viewModel = InventoryViewModel()
+        self.topView.parentViewController = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
 
 }

@@ -14,7 +14,7 @@ class PondsCollectionViewCellViewModel: PondsCollectionViewCellViewModelType {
     }
     
     var baseImage: UIImage {
-        return BasesData.bases[index].image
+        return BasesData.bases[index].image ?? UIImage()
     }
     
     var baseDescription: String {

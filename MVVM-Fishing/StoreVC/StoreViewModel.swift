@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ReactiveKit
+import Bond
 import RealmSwift
 
 
@@ -23,10 +23,10 @@ class StoreViewModel: StoreViewModelType {
     
     weak var viewController: UIViewController?
     
-    dynamic var money: String {
+    var money: String {
         get {
             let rawMoney = try! Realm().object(ofType: User.self, forPrimaryKey: "user")?.money ?? 0
-            return rawMoney.formatAsMoney()
+            return "У вас " + rawMoney.formatAsMoney()
         }
         set {
             

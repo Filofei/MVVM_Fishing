@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -50,18 +50,18 @@
             </objects>
             <point key="canvasLocation" x="-120" y="622"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM_Fishing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MVVM_Fishing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TX9-Qv-kid">
-                                <rect key="frame" x="45" y="592.5" width="285" height="44.5"/>
+                                <rect key="frame" x="45" y="501.5" width="230" height="36.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Go fishing!">
+                                <state key="normal" title="На рыбалку!">
                                     <color key="titleColor" red="0.20074689837351237" green="0.40149379674702473" blue="0.24941240577334281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -69,14 +69,14 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fFu-mM-jJT">
-                                <rect key="frame" x="45" y="125" width="285" height="437.5"/>
+                                <rect key="frame" x="45" y="116.5" width="230" height="355"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8J2-lC-Imc">
-                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="437.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="355"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCW-pW-cdX">
-                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="132.5"/>
-                                                <color key="backgroundColor" red="0.72401531470000002" green="0.84637821459999996" blue="0.75367879969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                                <color key="backgroundColor" red="0.72401531470000002" green="0.84637821459999996" blue="0.75460603967500006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HCW-pW-cdX" secondAttribute="height" multiplier="1:1" priority="999" id="YXz-KK-i1u"/>
                                                 </constraints>
@@ -88,8 +88,8 @@
                                                     <segue destination="ifv-pE-0az" kind="presentation" id="qtG-Pu-OrU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-4z-WQJ">
-                                                <rect key="frame" x="0.0" y="152.5" width="132.5" height="132.5"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-4z-WQJ">
+                                                <rect key="frame" x="0.0" y="125" width="105" height="105"/>
                                                 <color key="backgroundColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HrX-4z-WQJ" secondAttribute="height" multiplier="1:1" priority="999" id="BGa-i4-rcM"/>
@@ -102,8 +102,8 @@
                                                     <segue destination="v8C-4Z-kuz" kind="presentation" id="QEP-5k-iRT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnF-b1-fSp">
-                                                <rect key="frame" x="0.0" y="305" width="132.5" height="132.5"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnF-b1-fSp">
+                                                <rect key="frame" x="0.0" y="250" width="105" height="105"/>
                                                 <color key="backgroundColor" red="0.72401531470000002" green="0.84637821459999996" blue="0.75367879969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cnF-b1-fSp" secondAttribute="height" multiplier="1:1" priority="999" id="vye-kw-bur"/>
@@ -116,10 +116,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-TE-Aem">
-                                        <rect key="frame" x="152.5" y="0.0" width="132.5" height="437.5"/>
+                                        <rect key="frame" x="125" y="0.0" width="105" height="355"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-JA-dDy">
-                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="132.5"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpM-JA-dDy">
+                                                <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                                 <color key="backgroundColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="JpM-JA-dDy" secondAttribute="height" multiplier="1:1" priority="999" id="GaM-kb-6vu"/>
@@ -132,8 +132,8 @@
                                                     <segue destination="O4Z-tr-gao" kind="presentation" id="gCT-rV-brh"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im2-oU-w66">
-                                                <rect key="frame" x="0.0" y="152.5" width="132.5" height="132.5"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im2-oU-w66">
+                                                <rect key="frame" x="0.0" y="125" width="105" height="105"/>
                                                 <color key="backgroundColor" red="0.72401531470000002" green="0.84637821459999996" blue="0.75367879969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="im2-oU-w66" secondAttribute="height" multiplier="1:1" priority="999" id="alS-kF-C2p"/>
@@ -146,8 +146,8 @@
                                                     <segue destination="swH-LZ-QZ0" kind="presentation" id="eDe-cF-FsZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-7O-eQQ">
-                                                <rect key="frame" x="0.0" y="305" width="132.5" height="132.5"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-7O-eQQ">
+                                                <rect key="frame" x="0.0" y="250" width="105" height="105"/>
                                                 <color key="backgroundColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="dUH-7O-eQQ" secondAttribute="height" multiplier="1:1" priority="999" id="RzG-MH-JhM"/>
@@ -161,17 +161,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текущая база: ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-R0-ccj">
-                                <rect key="frame" x="45" y="72" width="285" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название базы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHv-R0-ccj">
+                                <rect key="frame" x="45" y="49.5" width="230" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="fEw-TI-Ju2"/>
+                                    <constraint firstAttribute="height" constant="35" id="fEw-TI-Ju2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.60124535567913107" green="0.70141267123287676" blue="0.62514389729922859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59858052800053874" green="0.70141267123287676" blue="0.62311486079498446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fFu-mM-jJT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BWq-nd-52O"/>
                             <constraint firstItem="fFu-mM-jJT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="F1l-Ie-TnG">
@@ -193,6 +193,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="currentBaseLabel" destination="bHv-R0-ccj" id="kGx-uQ-lp2"/>
                         <outlet property="toPondMenu" destination="TX9-Qv-kid" id="ugJ-S9-2F9"/>
                         <outletCollection property="buttons" destination="HCW-pW-cdX" collectionClass="NSMutableArray" id="NPF-eb-oaO"/>
                         <outletCollection property="buttons" destination="JpM-JA-dDy" collectionClass="NSMutableArray" id="CIh-9k-mNU"/>

@@ -13,4 +13,5 @@ protocol StoreTableViewCellViewModelType: class {
     var name: String { get }
     var price: String { get }
     var value: String { get }
+    var alreadyExists: Bool { get }
 }

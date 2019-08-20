@@ -14,7 +14,7 @@ class User: Object {
     @objc dynamic var id: String = "user"
     @objc dynamic var name: String = "Игрок 1"
     @objc dynamic var level: Int = 1
-    @objc dynamic var currentBase: String = Bases.country.rawValue
+    @objc dynamic var currentBase: String = BasesData.bases[0].name
     @objc dynamic var money: Int = 1000
 
     convenience init(name: String, level: Int, currentBase: String, money: Int) {
@@ -24,11 +24,12 @@ class User: Object {
         self.currentBase = currentBase
         self.money = money
     }
+    
     func subtractMoney(_ money: Int) {
         guard let realm = realm else { return }
         try! realm.write {
             if money > self.money {
-                return
+                fatalError(FatalErrorMessages.Realm.notEnoughMoneyError.rawValue)
             }
             self.money -= money
         }
