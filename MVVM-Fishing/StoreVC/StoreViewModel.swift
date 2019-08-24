@@ -43,9 +43,9 @@ class StoreViewModel: StoreViewModelType {
     }
     var itemNames: [String] = []
 
-    var chosenCategory: Int = 0 {
+    var selectedCategory: Int = 0 {
         didSet {
-            switch chosenCategory {
+            switch selectedCategory {
             case 0: 
                 items = RodsData.rods
             case 1:

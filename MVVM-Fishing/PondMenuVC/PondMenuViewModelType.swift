@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import Bond
 
 protocol PondMenuViewModelType {
     var currentBase: Base { get }
+    var selectedLocation: Location? { get set }
+    var averageDepth: String? { get set }
+    var selectedLocationImage: UIImage? { get set }
     var numberOfRows: Int { get }
+    func selectRow(atIndexPath indexPath: IndexPath)
     func cellViewModel(forIndexPath indexPath: IndexPath) -> PondMenuTableViewCellViewModelType?
     
 }

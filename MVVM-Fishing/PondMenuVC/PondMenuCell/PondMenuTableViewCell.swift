@@ -13,6 +13,11 @@ class PondMenuTableViewCell: UITableViewCell {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
             self.locationNameLabel.text = viewModel.locationName
+            self.locationNameLabel.textColor = Palette.darkGreen
         }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        AppearanceManager.selectTableViewCell(selected, self)
     }
 }

@@ -12,7 +12,7 @@ import UIKit
 
 struct Location {
     
-    let image: UIImage
+    let image: UIImage?
     
     let name: String
     
@@ -26,13 +26,17 @@ struct Location {
         }
     }
     
+    
+    
     var depthMap: DepthMap {
         return DepthMapGenerator.generateMap(minDepth, maxDepth, numberOfRows)
     }
     
     let minDepth: Int
     let maxDepth: Int
-    /// The number 
+    
+    /// The value of this constant should be strictly between 0 and 15.
+    
     let numberOfRows: Int
     var fishPopulation: FishPopulation
 }

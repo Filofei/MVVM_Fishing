@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Bond
 import RealmSwift
 
 class PondMenuViewModel: PondMenuViewModelType {
-    
-    
+        
     private let realm = try! Realm()
     
+    private var selectedIndexPath: IndexPath? {
+        willSet {
+            self.selectedLocation = currentBase.locations[newValue?.row ?? 0]
+        }
+    }
+
     var currentBase: Base {
         var output: Base = BasesData.bases[0]
         if let user = realm.object(ofType: User.self, forPrimaryKey: "user") {
@@ -26,8 +32,23 @@ class PondMenuViewModel: PondMenuViewModelType {
         return output
     }
     
+    var selectedLocation: Location? = nil {
+        willSet {
+            self.averageDepth = "Средняя глубина: \(String(newValue?.averageDepth ?? 0)) см"
+            self.selectedLocationImage = newValue?.image
+        }
+    }
+
+    var averageDepth: String?
+    
+    var selectedLocationImage: UIImage?
+    
     var numberOfRows: Int {
         return currentBase.locations.count
+    }
+    
+    func selectRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
     }
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> PondMenuTableViewCellViewModelType? {

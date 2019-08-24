@@ -22,9 +22,12 @@ extension PondMenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return viewModel?.numberOfRows ?? 0
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel?.selectRow(atIndexPath: indexPath)
+        self.updateUI()
     }
     
 }

@@ -12,7 +12,7 @@ import Bond
 protocol StoreViewModelType {
     var money: String { get set }
     var viewController: UIViewController? { get set }
-    var chosenCategory: Int { get set }
+    var selectedCategory: Int { get set }
     var scrollBarImages: [UIImage?] { get }
     var scrollBarText: [String] { get }
     func numberOfRows() -> Int

@@ -23,11 +23,14 @@ class PondMenuViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var goToLocationButton: UIButton!
+    @IBOutlet weak var averageDepthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
         setAppearance()
+        bindUI()
+        selectDefaultRow()
     }
     
     func initialize() {
@@ -40,9 +43,10 @@ class PondMenuViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if segue.identifier == "" {
+        if segue.identifier == "toLocationViewController" {
             if let destination = segue.destination as? LocationViewController {
-                //destination.viewModel?.location = self.viewModel
+                destination.viewModel = LocationViewModel()
+                destination.viewModel?.location = self.viewModel?.selectedLocation
             }
         }
     }

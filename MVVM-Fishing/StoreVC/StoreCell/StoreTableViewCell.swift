@@ -41,15 +41,7 @@ class StoreTableViewCell: UITableViewCell {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
-        if selected {
-            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
-                self.backgroundColor = UIColor(white: 0.9, alpha: 1)
-            }, completion: nil)
-        } else {
-            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
-                self.backgroundColor = .white
-            }, completion: nil)
-        }
+        AppearanceManager.selectTableViewCell(selected, self)
     }
     
     func colorForItemExistenceIndicator(_ status: Bool) -> UIColor {

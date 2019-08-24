@@ -1,8 +1,9 @@
 //
 //  LocationViewModelType.swift
 
-import Foundation
+import UIKit
 
 protocol LocationViewModelType {
-    var location: Location { get }
+    var location: Location? { get set }
+    var locationImage: UIImage? { get }
 }

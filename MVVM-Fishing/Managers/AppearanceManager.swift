@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppearanceManager: AppearanceProtocol {
+final class AppearanceManager: AppearanceProtocol {
     
     weak var controller: UIViewController?
     
@@ -30,6 +30,14 @@ class AppearanceManager: AppearanceProtocol {
         }
     }
     
+    /// Sets the background color to the array of views.
+    
+    public func applyColorToText(_ labels: [UILabel?], _ color: UIColor) {
+        labels.forEach {
+            $0?.textColor = color
+        }
+    }
+    
     /// Sets view's alpha to 0 or 1 depending on passed state value. Animated.
     
     public func toggleViewAlpha(_ view: UIView, _ state: Bool, completion: (() -> Void)?) {
@@ -41,6 +49,20 @@ class AppearanceManager: AppearanceProtocol {
                 view.alpha = 0
             }
         }, completion: { (true) in completion?() })
+    }
+    
+    /// Performs neat tableViewCell selection animation instead of default one.
+    
+    static public func selectTableViewCell(_ selected: Bool, _ cell: UITableViewCell) {
+        if selected {
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
+            cell.backgroundColor = UIColor(white: 0.9, alpha: 1)
+            }, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
+            cell.backgroundColor = .white
+            }, completion: nil)
+        }
     }
     
 }

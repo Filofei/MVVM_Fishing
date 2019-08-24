@@ -47,7 +47,7 @@ class StoreViewController: UIViewController,  ScrollBarDelegate {
     }
     
     internal func didSelectCell(atIndex index: Int) {
-        viewModel?.chosenCategory = index
+        viewModel?.selectedCategory = index
         viewModel?.deselectRow()
         tableView.reloadData()
     }

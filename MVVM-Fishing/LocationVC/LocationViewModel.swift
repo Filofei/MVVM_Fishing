@@ -7,8 +7,10 @@ class LocationViewModel: LocationViewModelType {
     
     // MARK: Properties
     
-    var location: Location {
-        return LocationsData.locations[0][0]
+    var location: Location?
+    
+    var locationImage: UIImage? {
+        return location?.image
     }
     
     // MARK: Initializers

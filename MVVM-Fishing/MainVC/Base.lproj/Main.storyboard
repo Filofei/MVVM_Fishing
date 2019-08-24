@@ -65,7 +65,7 @@
                                     <color key="titleColor" red="0.20074689837351237" green="0.40149379674702473" blue="0.24941240577334281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ilq-SO-0E4" kind="show" id="mxG-85-btv"/>
+                                    <segue destination="ilq-SO-0E4" kind="show" identifier="toPondMenuViewController" id="mxG-85-btv"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fFu-mM-jJT">
@@ -85,7 +85,7 @@
                                                     <color key="titleColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="ifv-pE-0az" kind="presentation" id="qtG-Pu-OrU"/>
+                                                    <segue destination="ifv-pE-0az" kind="presentation" identifier="toInventoryViewController" id="qtG-Pu-OrU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-4z-WQJ">
@@ -99,7 +99,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="v8C-4Z-kuz" kind="presentation" id="QEP-5k-iRT"/>
+                                                    <segue destination="v8C-4Z-kuz" kind="presentation" identifier="toProfileViewController" id="QEP-5k-iRT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnF-b1-fSp">
@@ -129,7 +129,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="O4Z-tr-gao" kind="presentation" id="gCT-rV-brh"/>
+                                                    <segue destination="O4Z-tr-gao" kind="presentation" identifier="toStoreViewController" id="gCT-rV-brh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="im2-oU-w66">
@@ -143,7 +143,7 @@
                                                     <color key="titleColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="swH-LZ-QZ0" kind="presentation" id="eDe-cF-FsZ"/>
+                                                    <segue destination="swH-LZ-QZ0" kind="presentation" identifier="toPondsViewController" id="eDe-cF-FsZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUH-7O-eQQ">

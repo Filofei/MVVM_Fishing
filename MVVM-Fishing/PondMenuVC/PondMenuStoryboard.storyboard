@@ -31,7 +31,7 @@
                                                 <rect key="frame" x="149" y="0.0" width="139" height="277"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PondMenuCell" id="tDH-Ih-l7p" customClass="PondMenuTableViewCell" customModule="MVVM_Fishing" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="PondMenuCell" id="tDH-Ih-l7p" customClass="PondMenuTableViewCell" customModule="MVVM_Fishing" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="139" height="55"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDH-Ih-l7p" id="afx-i7-Jyv">
@@ -52,6 +52,7 @@
                                                                 <constraint firstItem="2hV-QD-xIl" firstAttribute="bottom" secondItem="afx-i7-Jyv" secondAttribute="bottomMargin" id="veQ-Pz-Pyo"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <connections>
                                                             <outlet property="locationNameLabel" destination="2hV-QD-xIl" id="QIq-BH-ay0"/>
                                                         </connections>
@@ -63,12 +64,26 @@
                                             <constraint firstAttribute="width" secondItem="Pgf-IO-TpW" secondAttribute="height" multiplier="288:277" id="V5f-IP-KD4"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zlg-Yh-dKb">
+                                        <rect key="frame" x="16" y="309" width="288" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Средняя глубина: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh8-pC-Wls">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Pgf-IO-TpW" firstAttribute="leading" secondItem="b8P-Wq-2Qc" secondAttribute="leading" constant="16" id="0sy-pu-sTd"/>
                                     <constraint firstItem="Pgf-IO-TpW" firstAttribute="top" secondItem="b8P-Wq-2Qc" secondAttribute="top" constant="16" id="8uf-bn-9sy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zlg-Yh-dKb" secondAttribute="trailing" constant="16" id="Y1k-dr-GpY"/>
                                     <constraint firstAttribute="trailing" secondItem="Pgf-IO-TpW" secondAttribute="trailing" constant="16" id="qCW-e2-101"/>
+                                    <constraint firstItem="Zlg-Yh-dKb" firstAttribute="leading" secondItem="b8P-Wq-2Qc" secondAttribute="leading" constant="16" id="ufm-nq-bHz"/>
+                                    <constraint firstItem="Zlg-Yh-dKb" firstAttribute="top" secondItem="Pgf-IO-TpW" secondAttribute="bottom" constant="16" id="wgo-Up-6jp"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfn-Q3-7gK" customClass="TopView" customModule="MVVM_Fishing" customModuleProvider="target">
@@ -84,8 +99,13 @@
                                     <constraint firstAttribute="height" constant="39" id="0l2-B0-x1W"/>
                                     <constraint firstAttribute="width" constant="173" id="Efx-nS-1FI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Идти на локацию"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="На локацию!">
+                                    <color key="titleColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="85f-fV-bld" kind="showDetail" identifier="toLocationViewController" animates="NO" id="jeT-9a-01q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,6 +123,7 @@
                         <viewLayoutGuide key="safeArea" id="DNj-U7-ZNy"/>
                     </view>
                     <connections>
+                        <outlet property="averageDepthLabel" destination="zh8-pC-Wls" id="l3C-pD-gTr"/>
                         <outlet property="goToLocationButton" destination="Vaz-Dx-6sW" id="H5P-T5-Cmy"/>
                         <outlet property="locationImageView" destination="utk-6b-WlR" id="2J4-QK-RAn"/>
                         <outlet property="tableView" destination="aof-FZ-qY1" id="TpS-fk-2UE"/>
@@ -112,6 +133,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bag-SW-sdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1477.5" y="-1332.0422535211267"/>
+        </scene>
+        <!--LocationViewController-->
+        <scene sceneID="RRP-NE-H83">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LocationStoryboard" referencedIdentifier="LocationViewController" id="85f-fV-bld" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psc-vN-Jxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1478" y="-832"/>
         </scene>
     </scenes>
     <resources>

@@ -59,6 +59,16 @@
 		9C753502226606EB00BF25F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7534FA226606EA00BF25F1 /* SettingsViewController.swift */; };
 		9C753503226606EB00BF25F1 /* SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7534FB226606EA00BF25F1 /* SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift */; };
 		9C753504226606EB00BF25F1 /* SettingsVCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7534FC226606EA00BF25F1 /* SettingsVCStoryboard.storyboard */; };
+		9C80B74A2310618A009AEEE8 /* ob_main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B7492310618A009AEEE8 /* ob_main.jpg */; };
+		9C80B74D23106EC0009AEEE8 /* ob_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B74B23106EBF009AEEE8 /* ob_1.jpg */; };
+		9C80B74E23106EC0009AEEE8 /* ob_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B74C23106EBF009AEEE8 /* ob_2.jpg */; };
+		9C80B75023106EC9009AEEE8 /* platnik_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B74F23106EC8009AEEE8 /* platnik_2.jpg */; };
+		9C80B75323106ED2009AEEE8 /* moscow_river_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B75123106ED2009AEEE8 /* moscow_river_1.jpg */; };
+		9C80B75423106ED2009AEEE8 /* moscow_river_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B75223106ED2009AEEE8 /* moscow_river_2.jpg */; };
+		9C80B75723106EDC009AEEE8 /* country_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B75523106EDC009AEEE8 /* country_1.jpg */; };
+		9C80B75823106EDC009AEEE8 /* country_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C80B75623106EDC009AEEE8 /* country_2.jpg */; };
+		9C80B75A23113359009AEEE8 /* LocationViewController + UI + Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80B75923113359009AEEE8 /* LocationViewController + UI + Bindings.swift */; };
+		9C80B75C2311386E009AEEE8 /* TransparentTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C80B75B2311386E009AEEE8 /* TransparentTopView.swift */; };
 		9C8B6596225E18B5000B6A5B /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8B6595225E18B5000B6A5B /* DefaultsManager.swift */; };
 		9CA1611E2262572300848A75 /* UserField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1611D2262572300848A75 /* UserField.swift */; };
 		9CA16120226264C200848A75 /* Reflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1611F226264C200848A75 /* Reflectable.swift */; };
@@ -208,6 +218,16 @@
 		9C7534FA226606EA00BF25F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9C7534FB226606EA00BF25F1 /* SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		9C7534FC226606EA00BF25F1 /* SettingsVCStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsVCStoryboard.storyboard; sourceTree = "<group>"; };
+		9C80B7492310618A009AEEE8 /* ob_main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ob_main.jpg; sourceTree = "<group>"; };
+		9C80B74B23106EBF009AEEE8 /* ob_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ob_1.jpg; sourceTree = "<group>"; };
+		9C80B74C23106EBF009AEEE8 /* ob_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ob_2.jpg; sourceTree = "<group>"; };
+		9C80B74F23106EC8009AEEE8 /* platnik_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = platnik_2.jpg; sourceTree = "<group>"; };
+		9C80B75123106ED2009AEEE8 /* moscow_river_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moscow_river_1.jpg; sourceTree = "<group>"; };
+		9C80B75223106ED2009AEEE8 /* moscow_river_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moscow_river_2.jpg; sourceTree = "<group>"; };
+		9C80B75523106EDC009AEEE8 /* country_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = country_1.jpg; sourceTree = "<group>"; };
+		9C80B75623106EDC009AEEE8 /* country_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = country_2.jpg; sourceTree = "<group>"; };
+		9C80B75923113359009AEEE8 /* LocationViewController + UI + Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController + UI + Bindings.swift"; sourceTree = "<group>"; };
+		9C80B75B2311386E009AEEE8 /* TransparentTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentTopView.swift; sourceTree = "<group>"; };
 		9C8B6595225E18B5000B6A5B /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		9CA1611D2262572300848A75 /* UserField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserField.swift; sourceTree = "<group>"; };
 		9CA1611F226264C200848A75 /* Reflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reflectable.swift; sourceTree = "<group>"; };
@@ -459,9 +479,10 @@
 		9C6D6DFA22FEFD9D00E5323C /* Ponds */ = {
 			isa = PBXGroup;
 			children = (
-				9C6D6DFB22FEFD9D00E5323C /* Moscow River */,
-				9C6D6DFD22FEFD9D00E5323C /* Platnik */,
 				9C6D6DFF22FEFD9D00E5323C /* Country */,
+				9C6D6DFB22FEFD9D00E5323C /* Moscow River */,
+				9C80B74723105E47009AEEE8 /* Ob */,
+				9C6D6DFD22FEFD9D00E5323C /* Platnik */,
 			);
 			path = Ponds;
 			sourceTree = "<group>";
@@ -516,6 +537,24 @@
 			path = SettingsCell;
 			sourceTree = "<group>";
 		};
+		9C80B74723105E47009AEEE8 /* Ob */ = {
+			isa = PBXGroup;
+			children = (
+				9C80B7492310618A009AEEE8 /* ob_main.jpg */,
+				9C80B74823105E67009AEEE8 /* Locations */,
+			);
+			path = Ob;
+			sourceTree = "<group>";
+		};
+		9C80B74823105E67009AEEE8 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				9C80B74B23106EBF009AEEE8 /* ob_1.jpg */,
+				9C80B74C23106EBF009AEEE8 /* ob_2.jpg */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
 		9CAD522C22207E8200732584 = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				9C526302222571CB00776746 /* TopView.swift */,
+				9C80B75B2311386E009AEEE8 /* TransparentTopView.swift */,
 			);
 			path = TopView;
 			sourceTree = "<group>";
@@ -667,8 +707,8 @@
 			isa = PBXGroup;
 			children = (
 				9C288B53230C5EE5001A067F /* PondMenuCell */,
-				9CCD3D1E22211CBE008747FA /* PondMenuViewModel.swift */,
 				9CCD3D2222211D13008747FA /* PondMenuStoryboard.storyboard */,
+				9CCD3D1E22211CBE008747FA /* PondMenuViewModel.swift */,
 				9CCD3D2422211D3B008747FA /* PondMenuViewController.swift */,
 				9C0DD4E322F0587100D0F5BB /* PondMenuViewModelType.swift */,
 				9CFAB431230BBC9800D3EF70 /* PondMenuViewController + UI + Bindings.swift */,
@@ -731,6 +771,8 @@
 		9CFAB420230AAAF700D3EF70 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				9C80B75123106ED2009AEEE8 /* moscow_river_1.jpg */,
+				9C80B75223106ED2009AEEE8 /* moscow_river_2.jpg */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -738,6 +780,7 @@
 		9CFAB421230AAB1800D3EF70 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				9C80B74F23106EC8009AEEE8 /* platnik_2.jpg */,
 				9CFAB42D230AFD7600D3EF70 /* platnik_1.jpg */,
 			);
 			path = Locations;
@@ -746,6 +789,8 @@
 		9CFAB422230AAB2600D3EF70 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				9C80B75523106EDC009AEEE8 /* country_1.jpg */,
+				9C80B75623106EDC009AEEE8 /* country_2.jpg */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -757,6 +802,7 @@
 				9CFAB426230AFAC500D3EF70 /* LocationViewModel.swift */,
 				9CFAB427230AFAC500D3EF70 /* LocationViewController.swift */,
 				9CFAB428230AFAC500D3EF70 /* LocationStoryboard.storyboard */,
+				9C80B75923113359009AEEE8 /* LocationViewController + UI + Bindings.swift */,
 			);
 			path = LocationVC;
 			sourceTree = "<group>";
@@ -935,17 +981,25 @@
 			files = (
 				9CCD3D2322211D13008747FA /* PondMenuStoryboard.storyboard in Resources */,
 				9C5383F22260FCFD00BFE552 /* FishMarketStoryboard.storyboard in Resources */,
+				9C80B74A2310618A009AEEE8 /* ob_main.jpg in Resources */,
+				9C80B75323106ED2009AEEE8 /* moscow_river_1.jpg in Resources */,
 				9C6D6E0222FEFD9E00E5323C /* platnik_main.jpg in Resources */,
+				9C80B74D23106EC0009AEEE8 /* ob_1.jpg in Resources */,
 				9CCD3D1A222114A1008747FA /* InventoryStoryboard.storyboard in Resources */,
 				9C6D6E0122FEFD9E00E5323C /* moscow_river_main.jpg in Resources */,
+				9C80B75723106EDC009AEEE8 /* country_1.jpg in Resources */,
+				9C80B75823106EDC009AEEE8 /* country_2.jpg in Resources */,
+				9C80B74E23106EC0009AEEE8 /* ob_2.jpg in Resources */,
 				9CBB226422EF66E400E18698 /* PondsStoryboard.storyboard in Resources */,
 				9C6D6E0322FEFD9E00E5323C /* country_main.jpg in Resources */,
+				9C80B75423106ED2009AEEE8 /* moscow_river_2.jpg in Resources */,
 				9CAD524322207E8600732584 /* LaunchScreen.storyboard in Resources */,
 				9C5195C9222542CC0064E29E /* ProfileStoryboard.storyboard in Resources */,
 				9CAD523E22207E8200732584 /* Main.storyboard in Resources */,
 				9CB3F331222C3D1E00B1F625 /* Assets.xcassets in Resources */,
 				9CFAB41F230A88BB00D3EF70 /* travel.json in Resources */,
 				9C753504226606EB00BF25F1 /* SettingsVCStoryboard.storyboard in Resources */,
+				9C80B75023106EC9009AEEE8 /* platnik_2.jpg in Resources */,
 				9CFAB42C230AFAC500D3EF70 /* LocationStoryboard.storyboard in Resources */,
 				9C5195D522256E800064E29E /* StoreStoryboard.storyboard in Resources */,
 				9CFAB42E230AFD7600D3EF70 /* platnik_1.jpg in Resources */,
@@ -1034,6 +1088,7 @@
 				9CBAD1A6222D82630059CF16 /* StoreViewModelType.swift in Sources */,
 				9CFAB42A230AFAC500D3EF70 /* LocationViewModel.swift in Sources */,
 				9CE00A252221310100B7F220 /* Rod.swift in Sources */,
+				9C80B75A23113359009AEEE8 /* LocationViewController + UI + Bindings.swift in Sources */,
 				9CE292782223A13500FECF2B /* BasesData.swift in Sources */,
 				9C288B59230C5EE5001A067F /* PondMenuTableViewCell.swift in Sources */,
 				9C5383F12260FCFD00BFE552 /* FishMarketViewController.swift in Sources */,
@@ -1115,6 +1170,7 @@
 				9CFF8BB022887DB50076F269 /* InventoryViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */,
 				9CE292822223D5F700FECF2B /* Locations.swift in Sources */,
 				9C526303222571CB00776746 /* TopView.swift in Sources */,
+				9C80B75C2311386E009AEEE8 /* TransparentTopView.swift in Sources */,
 				9C6D6E052300295C00E5323C /* MainViewController + UI + Bindings.swift in Sources */,
 				9C5383EE2260FCFD00BFE552 /* FishMarketTableViewCellViewModelType.swift in Sources */,
 				9C7534FE226606EB00BF25F1 /* SettingsViewModel.swift in Sources */,

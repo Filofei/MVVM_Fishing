@@ -17,8 +17,12 @@ import TinyConstraints
         case verticalInset = 7
         case horizontalInset = 10
     }
-    private let textColor = Palette.darkGreen
-    private let bgColor = Palette.backgroundGreen
+    public var textColor: UIColor {
+        return Palette.darkGreen
+    }
+    public var bgColor: UIColor {
+        return Palette.backgroundGreen
+    } 
     public var backButton = UIButton.init(type: .system)
     public var settingsButton = UIButton.init(type: .system)
     public var timeLabel = UILabel()
@@ -49,7 +53,7 @@ import TinyConstraints
     
     /// This method makes the initial setup of the TopView
 
-    private func initialize() {
+    public func initialize() {
         buttons = [backButton, settingsButton]
         self.backgroundColor = bgColor
         createButtons(buttons!)
@@ -103,7 +107,6 @@ import TinyConstraints
         self.parentViewController?.dismiss(animated: true, completion: nil)
     }
     @objc func openSettings(_ sender: Any) {
-        print("DidOpenSettings")
         if let parent = parentViewController, let child = secondButtonViewController {
             parent.addChild(child)
         }

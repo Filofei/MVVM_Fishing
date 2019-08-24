@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,52 @@
             <objects>
                 <viewController storyboardIdentifier="LocationViewController" id="W86-sJ-OJD" customClass="LocationViewController" customModule="MVVM_Fishing" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgM-9v-yVr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="platnik_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-ZJ-i3b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-Fq-Ene">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Opy-2w-k9H">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCi-Tq-TLH" customClass="TransparentTopView" customModule="MVVM_Fishing" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jCi-Tq-TLH" firstAttribute="leading" secondItem="Opy-2w-k9H" secondAttribute="leading" id="5ap-m0-Bbj"/>
+                                        <constraint firstAttribute="bottom" secondItem="jCi-Tq-TLH" secondAttribute="bottom" id="Lim-5w-KXd"/>
+                                        <constraint firstAttribute="trailing" secondItem="jCi-Tq-TLH" secondAttribute="trailing" id="qn3-kb-bY0"/>
+                                        <constraint firstItem="jCi-Tq-TLH" firstAttribute="top" secondItem="Opy-2w-k9H" secondAttribute="top" id="rbr-Ar-dB4"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aVE-A3-qO2"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Gyh-ZJ-i3b" firstAttribute="bottom" secondItem="hgM-9v-yVr" secondAttribute="bottom" id="0rC-Wu-39w"/>
+                            <constraint firstItem="qf8-Fq-Ene" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="Rw9-MO-tn8"/>
+                            <constraint firstItem="qf8-Fq-Ene" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="V7Y-ZG-Se9"/>
                             <constraint firstItem="Gyh-ZJ-i3b" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="VxO-Hw-7so"/>
+                            <constraint firstItem="qf8-Fq-Ene" firstAttribute="top" secondItem="hgM-9v-yVr" secondAttribute="top" id="eVC-X0-Zox"/>
                             <constraint firstItem="Gyh-ZJ-i3b" firstAttribute="top" secondItem="hgM-9v-yVr" secondAttribute="top" id="oh8-zI-grf"/>
                             <constraint firstItem="Gyh-ZJ-i3b" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="r3o-cU-eBT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lDx-68-xBt"/>
                     </view>
+                    <connections>
+                        <outlet property="locationImageView" destination="Gyh-ZJ-i3b" id="DfT-dV-JCK"/>
+                        <outlet property="topView" destination="jCi-Tq-TLH" id="b2R-6R-tHq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNZ-v5-vLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,6 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="platnik_1.jpg" width="1245" height="2532"/>
+        <image name="platnik_1.jpg" width="1245" height="2489"/>
     </resources>
 </document>
