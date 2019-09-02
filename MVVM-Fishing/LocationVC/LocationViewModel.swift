@@ -9,11 +9,18 @@ class LocationViewModel: LocationViewModelType {
     
     var location: Location?
     
+    var tackleState: TackleState
+    
     var locationImage: UIImage? {
         return location?.image
     }
     
     // MARK: Initializers
+    
+    init(location: Location?) {
+        self.tackleStatus = 
+        self.location = location
+    }
     
     // MARK: Public methods.
     

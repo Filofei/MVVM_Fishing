@@ -6,14 +6,11 @@ PODS:
   - Differ (1.4.1)
   - lottie-ios (3.0.6)
   - ReactiveKit (3.12.0)
-  - Realm (3.17.1):
-    - Realm/Headers (= 3.17.1)
-  - Realm/Headers (3.17.1)
-  - RealmSwift (3.17.1):
-    - Realm (= 3.17.1)
-  - RxRealm (1.0.0):
-    - RealmSwift (~> 3.14)
-    - RxSwift (~> 5.0)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
   - RxSwift (5.0.0)
   - TinyConstraints (4.0.0)
 
@@ -22,7 +19,6 @@ DEPENDENCIES:
   - CenteredCollectionView
   - lottie-ios
   - RealmSwift
-  - RxRealm
   - RxSwift
   - TinyConstraints
 
@@ -35,7 +31,6 @@ SPEC REPOS:
     - ReactiveKit
     - Realm
     - RealmSwift
-    - RxRealm
     - RxSwift
     - TinyConstraints
 
@@ -45,12 +40,11 @@ SPEC CHECKSUMS:
   Differ: ca4350872e32a1aeedf3d9e2d9e47127833bfa9c
   lottie-ios: d030b6cda141cfd8bbaa3db89264785e6fdf675a
   ReactiveKit: 7634cc10d9fb8791f9a87bf60c283fb420db3184
-  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
-  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
-  RxRealm: 1e81dcfca1fb50c3e9b3e1f8102bc875c5156a2e
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: f7749486913039f79edc9d9a4117a7934f1a4871
+PODFILE CHECKSUM: 1d409e8fa5983b60ae8ce0c463c743347ac626c7
 
 COCOAPODS: 1.7.5

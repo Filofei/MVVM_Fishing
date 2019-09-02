@@ -10,7 +10,7 @@ import UIKit
 
 /// A struct that represents a fish species which can be caught on the location.
 
-struct Fish {
+struct FishKind {
     
     var image: UIImage
     

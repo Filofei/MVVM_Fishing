@@ -45,8 +45,7 @@ class PondMenuViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         if segue.identifier == "toLocationViewController" {
             if let destination = segue.destination as? LocationViewController {
-                destination.viewModel = LocationViewModel()
-                destination.viewModel?.location = self.viewModel?.selectedLocation
+                destination.viewModel = LocationViewModel(location: self.viewModel?.selectedLocation)
             }
         }
     }

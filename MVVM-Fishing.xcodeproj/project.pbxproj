@@ -100,6 +100,7 @@
 		9CBB226222EF66E400E18698 /* PondsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB225A22EF66E400E18698 /* PondsViewController.swift */; };
 		9CBB226322EF66E400E18698 /* PondsViewController + UICollectionViewDelegate + UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBB225B22EF66E400E18698 /* PondsViewController + UICollectionViewDelegate + UICollectionViewDataSource.swift */; };
 		9CBB226422EF66E400E18698 /* PondsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CBB225C22EF66E400E18698 /* PondsStoryboard.storyboard */; };
+		9CBDC8F02316E91400B337E8 /* TackleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDC8EF2316E91400B337E8 /* TackleState.swift */; };
 		9CCD3D1822211477008747FA /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD3D1722211477008747FA /* InventoryViewController.swift */; };
 		9CCD3D1A222114A1008747FA /* InventoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCD3D19222114A1008747FA /* InventoryStoryboard.storyboard */; };
 		9CCD3D1C222119BF008747FA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD3D1B222119BF008747FA /* MainViewModel.swift */; };
@@ -111,12 +112,11 @@
 		9CD7071622F9EFB1001F30A7 /* AppearanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7071522F9EFB1001F30A7 /* AppearanceProtocol.swift */; };
 		9CDAE52D225E04DF0038B6FB /* Tackle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDAE52C225E04DF0038B6FB /* Tackle.swift */; };
 		9CDD166322F230780027C3AF /* PondsViewController + UI + Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD166222F230780027C3AF /* PondsViewController + UI + Bindings.swift */; };
-		9CDD166522F233B60027C3AF /* moneyFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD166422F233B60027C3AF /* moneyFormatted.swift */; };
+		9CDD166522F233B60027C3AF /* MoneyFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD166422F233B60027C3AF /* MoneyFormatted.swift */; };
 		9CE00A252221310100B7F220 /* Rod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A242221310100B7F220 /* Rod.swift */; };
 		9CE00A272221325600B7F220 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A262221325600B7F220 /* User.swift */; };
 		9CE00A2A222136A300B7F220 /* FishInPond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A29222136A300B7F220 /* FishInPond.swift */; };
 		9CE00A2C222142EB00B7F220 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A2B222142EB00B7F220 /* ItemType.swift */; };
-		9CE00A302222E59800B7F220 /* Rods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A2F2222E59800B7F220 /* Rods.swift */; };
 		9CE00A342222F31C00B7F220 /* RodsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE00A332222F31C00B7F220 /* RodsData.swift */; };
 		9CE292782223A13500FECF2B /* BasesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE292772223A13500FECF2B /* BasesData.swift */; };
 		9CE2927C2223D1B700FECF2B /* LocationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2927B2223D1B700FECF2B /* LocationsData.swift */; };
@@ -261,6 +261,7 @@
 		9CBB225A22EF66E400E18698 /* PondsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PondsViewController.swift; sourceTree = "<group>"; };
 		9CBB225B22EF66E400E18698 /* PondsViewController + UICollectionViewDelegate + UICollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PondsViewController + UICollectionViewDelegate + UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		9CBB225C22EF66E400E18698 /* PondsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PondsStoryboard.storyboard; sourceTree = "<group>"; };
+		9CBDC8EF2316E91400B337E8 /* TackleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TackleState.swift; sourceTree = "<group>"; };
 		9CCD3D1722211477008747FA /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		9CCD3D19222114A1008747FA /* InventoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InventoryStoryboard.storyboard; sourceTree = "<group>"; };
 		9CCD3D1B222119BF008747FA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -272,12 +273,11 @@
 		9CD7071522F9EFB1001F30A7 /* AppearanceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceProtocol.swift; sourceTree = "<group>"; };
 		9CDAE52C225E04DF0038B6FB /* Tackle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tackle.swift; sourceTree = "<group>"; };
 		9CDD166222F230780027C3AF /* PondsViewController + UI + Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PondsViewController + UI + Bindings.swift"; sourceTree = "<group>"; };
-		9CDD166422F233B60027C3AF /* moneyFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyFormatted.swift; sourceTree = "<group>"; };
+		9CDD166422F233B60027C3AF /* MoneyFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyFormatted.swift; sourceTree = "<group>"; };
 		9CE00A242221310100B7F220 /* Rod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rod.swift; sourceTree = "<group>"; };
 		9CE00A262221325600B7F220 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CE00A29222136A300B7F220 /* FishInPond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishInPond.swift; sourceTree = "<group>"; };
 		9CE00A2B222142EB00B7F220 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
-		9CE00A2F2222E59800B7F220 /* Rods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rods.swift; sourceTree = "<group>"; };
 		9CE00A332222F31C00B7F220 /* RodsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RodsData.swift; sourceTree = "<group>"; };
 		9CE292772223A13500FECF2B /* BasesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasesData.swift; sourceTree = "<group>"; };
 		9CE2927B2223D1B700FECF2B /* LocationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsData.swift; sourceTree = "<group>"; };
@@ -362,14 +362,6 @@
 				9C5195C122252E6A0064E29E /* Line.swift */,
 				9C5195C5222531770064E29E /* Hook.swift */,
 				9CB3F334222CDC5200B1F625 /* Bait.swift */,
-			);
-			path = Inventory;
-			sourceTree = "<group>";
-		};
-		9C5195B6222504580064E29E /* Inventory */ = {
-			isa = PBXGroup;
-			children = (
-				9CE00A2F2222E59800B7F220 /* Rods.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -667,6 +659,14 @@
 			path = PondsCell;
 			sourceTree = "<group>";
 		};
+		9CBDC8F1231A481900B337E8 /* TackleStates */ = {
+			isa = PBXGroup;
+			children = (
+				9CBDC8EF2316E91400B337E8 /* TackleState.swift */,
+			);
+			path = TackleStates;
+			sourceTree = "<group>";
+		};
 		9CCD3D14222113F2008747FA /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,10 +681,10 @@
 		9CCD3D152221142B008747FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9CE00A2D2222E54600B7F220 /* Data Enums */,
 				9C51B7E22223208500DBE37C /* Protocols */,
 				9CE00A2E2222E56A00B7F220 /* Structs and Classes */,
 				9CE00A282221349600B7F220 /* RealmClasses */,
-				9CE00A2D2222E54600B7F220 /* Strings */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -740,10 +740,9 @@
 			path = RealmClasses;
 			sourceTree = "<group>";
 		};
-		9CE00A2D2222E54600B7F220 /* Strings */ = {
+		9CE00A2D2222E54600B7F220 /* Data Enums */ = {
 			isa = PBXGroup;
 			children = (
-				9C5195B6222504580064E29E /* Inventory */,
 				9C51B7E32223260700DBE37C /* Bases.swift */,
 				9CE292812223D5F700FECF2B /* Locations.swift */,
 				9C5195BB222509E80064E29E /* Fishes.swift */,
@@ -751,7 +750,7 @@
 				9CFF8BC1228BDBB40076F269 /* FatalErrorMessages.swift */,
 				9CFF8BBF228B2CD80076F269 /* MainPrimaryKeys.swift */,
 			);
-			path = Strings;
+			path = "Data Enums";
 			sourceTree = "<group>";
 		};
 		9CE00A2E2222E56A00B7F220 /* Structs and Classes */ = {
@@ -798,10 +797,11 @@
 		9CFAB424230AFAC500D3EF70 /* LocationVC */ = {
 			isa = PBXGroup;
 			children = (
+				9CBDC8F1231A481900B337E8 /* TackleStates */,
+				9CFAB428230AFAC500D3EF70 /* LocationStoryboard.storyboard */,
 				9CFAB425230AFAC500D3EF70 /* LocationViewModelType.swift */,
 				9CFAB426230AFAC500D3EF70 /* LocationViewModel.swift */,
 				9CFAB427230AFAC500D3EF70 /* LocationViewController.swift */,
-				9CFAB428230AFAC500D3EF70 /* LocationStoryboard.storyboard */,
 				9C80B75923113359009AEEE8 /* LocationViewController + UI + Bindings.swift */,
 			);
 			path = LocationVC;
@@ -896,7 +896,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFF8BBB22897BFF0076F269 /* ItemTypeFormatted.swift */,
-				9CDD166422F233B60027C3AF /* moneyFormatted.swift */,
+				9CDD166422F233B60027C3AF /* MoneyFormatted.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1095,6 +1095,7 @@
 				9C288B5C230C5F3A001A067F /* PondMenuViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */,
 				9CBAD1A2222D215E0059CF16 /* StoreTableViewCellViewModelType.swift in Sources */,
 				9C5195C222252E6A0064E29E /* Line.swift in Sources */,
+				9CBDC8F02316E91400B337E8 /* TackleState.swift in Sources */,
 				9CFF8B8422886A6F0076F269 /* UISearchBar+Extensions.swift in Sources */,
 				9C288B58230C5EE5001A067F /* PondMenuTableViewCellViewModelType.swift in Sources */,
 				9C753502226606EB00BF25F1 /* SettingsViewController.swift in Sources */,
@@ -1153,13 +1154,12 @@
 				9C6BB3E4222E83F600A3AB57 /* BaitsData.swift in Sources */,
 				9C5195C6222531770064E29E /* Hook.swift in Sources */,
 				9CCD3D1F22211CBE008747FA /* PondMenuViewModel.swift in Sources */,
-				9CDD166522F233B60027C3AF /* moneyFormatted.swift in Sources */,
+				9CDD166522F233B60027C3AF /* MoneyFormatted.swift in Sources */,
 				9CBB225D22EF66E400E18698 /* PondsViewModelType.swift in Sources */,
 				9CFF8B8822886A6F0076F269 /* Common+Extensions.swift in Sources */,
 				9C7534FF226606EB00BF25F1 /* SettingsTableViewCellViewModelType.swift in Sources */,
 				9CFF8BAB22886A6F0076F269 /* SegmentedControl.swift in Sources */,
 				9C753503226606EB00BF25F1 /* SettingsViewController + UITableViewDelegate + UITableViewDataSource.swift in Sources */,
-				9CE00A302222E59800B7F220 /* Rods.swift in Sources */,
 				9CFF8BBE228A91B10076F269 /* InventoryViewModelType.swift in Sources */,
 				9C288B5A230C5EE5001A067F /* PondMenuTableViewCellViewModel.swift in Sources */,
 				9CAD523922207E8200732584 /* AppDelegate.swift in Sources */,

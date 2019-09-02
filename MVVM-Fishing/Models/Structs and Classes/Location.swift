@@ -16,7 +16,7 @@ struct Location {
     
     let name: String
     
-    let base: Bases
+    let baseID: String
     
     /// The average depth of the location.
     

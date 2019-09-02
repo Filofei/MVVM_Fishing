@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MainPrimaryKeys {
+enum MainPrimaryKeys {
     static let user = "user"
     static let tackles = ["tackle1", "tackle2"]
 }

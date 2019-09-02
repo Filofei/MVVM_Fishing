@@ -8,6 +8,9 @@
 
 import Foundation
 
-class FishPopulation {
+struct FishPopulation {
     
+    public func generateFish() {
+        
+    }
 }

@@ -10,4 +10,13 @@ import Foundation
 
 struct DepthMap {
     
+    // FIXME: Another type
+    
+    typealias Map = [Int]
+    
+    var map: Map?
+    
+    func generateMap(of rows: Int, _ minDepth: Int, _ maxDepth: Int) {
+        
+    }
 }

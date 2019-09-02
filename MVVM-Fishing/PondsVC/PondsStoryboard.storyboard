@@ -132,16 +132,16 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0sD-ra-ZlL">
-                                <rect key="frame" x="0.0" y="78" width="320" height="21.5"/>
+                                <rect key="frame" x="15" y="78" width="290" height="21.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас ___₽." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4x-al-uY7">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="У вас ___₽." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4x-al-uY7">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___ уровень" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRe-Jg-vX1">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___ уровень" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRe-Jg-vX1">
+                                        <rect key="frame" x="145" y="0.0" width="145" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" red="0.20074689840000001" green="0.40149379670000002" blue="0.24941240579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -152,13 +152,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0sD-ra-ZlL" firstAttribute="top" secondItem="jiz-BO-IU5" secondAttribute="bottom" constant="8" id="2TR-AO-Myr"/>
-                            <constraint firstItem="lDx-68-xBt" firstAttribute="trailing" secondItem="0sD-ra-ZlL" secondAttribute="trailing" id="70u-cb-tJe"/>
+                            <constraint firstItem="lDx-68-xBt" firstAttribute="trailing" secondItem="0sD-ra-ZlL" secondAttribute="trailing" constant="15" id="70u-cb-tJe"/>
                             <constraint firstItem="jiz-BO-IU5" firstAttribute="top" secondItem="lDx-68-xBt" secondAttribute="top" id="7ua-ch-yHe"/>
                             <constraint firstItem="LSa-l9-69k" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="86Q-I2-pDU"/>
                             <constraint firstItem="kkH-8c-jJc" firstAttribute="height" secondItem="LSa-l9-69k" secondAttribute="height" multiplier="3" id="9er-WF-0XK"/>
                             <constraint firstItem="kkH-8c-jJc" firstAttribute="top" secondItem="0sD-ra-ZlL" secondAttribute="bottom" constant="8" id="C9s-oA-85X"/>
                             <constraint firstItem="kkH-8c-jJc" firstAttribute="centerX" secondItem="lDx-68-xBt" secondAttribute="centerX" id="DIs-PW-jz7"/>
-                            <constraint firstItem="0sD-ra-ZlL" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="I36-Wi-4go"/>
+                            <constraint firstItem="0sD-ra-ZlL" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" constant="15" id="I36-Wi-4go"/>
                             <constraint firstItem="jiz-BO-IU5" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="I3k-ic-fci"/>
                             <constraint firstItem="jiz-BO-IU5" firstAttribute="trailing" secondItem="lDx-68-xBt" secondAttribute="trailing" id="Mel-nQ-kSv"/>
                             <constraint firstItem="kkH-8c-jJc" firstAttribute="leading" secondItem="lDx-68-xBt" secondAttribute="leading" id="OVB-T9-wta"/>

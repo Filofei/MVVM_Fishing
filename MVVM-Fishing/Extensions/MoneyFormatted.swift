@@ -1,5 +1,5 @@
 //
-//  moneyFormatted.swift
+//  MoneyFormatted.swift
 //  MVVM-Fishing
 //
 //  Created by Роман Орлов on 31.07.2019.
